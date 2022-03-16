@@ -1,7 +1,7 @@
 import * as React from "react";
+// import { Helmet } from "react-helmet";
 import Slider from "../components/Sliders";
 import Layout from "../parts/layout";
-import "../styles/globals.sass";
 
 const IndexPage = () => {
   return (
