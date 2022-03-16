@@ -1,0 +1,108 @@
+.header
+    margin: auto
+    padding: 26px 24px
+    box-sizing: border-box
+    position: absolute
+    z-index: 2
+    width: 100%
+    .header-inner
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        .brand
+            img
+                width: 117px
+        .burger
+            width: 40px
+            z-index: 3
+            .meat
+                display: flex
+                align-items: center
+                justify-content: center
+                position: relative
+                width: 40px
+                height: 2px
+                background-color: white
+                &::before,
+                &::after
+                    content: ''
+                    width: 40px
+                    height: 2px
+                    background-color: white
+                    position: absolute
+                    transition: all ease 0.5s
+                &::before
+                    top: -6px
+                &::after
+                    bottom: -6px
+            &.close
+                .meat
+                    background-color: transparent
+                    // &::before,
+                    // &::after
+                    //     width: 30px
+                    &::before
+                        transform: rotate(45deg)
+                        top: 0
+                    &::after
+                        transform: rotate(-45deg)
+                        bottom: 0
+        .menu
+            // display: none
+            position: fixed
+            width: 100vw
+            height: 100vh
+            background-color: black
+            background-image: url(/static/images/back-menu.png)
+            background-position: center
+            background-size: cover
+            margin: auto
+            top: 0
+            left: 0
+            right: -300vw
+            z-index: 2
+            padding: 0 24px
+            transition: all ease-in-out 0.7s
+            opacity: 0
+            .menu-header
+                padding: 26px 0
+                // opacity: 0
+                transition: all ease-in-out 1s
+                img
+                    width: 117px
+            .menu-nav
+                margin-top: 26px
+                // margin-left: 50px
+                transition: all ease-in-out 1s
+                // opacity: 0
+                a
+                    font-weight: 700
+                    line-height: 24px
+                    text-transform: uppercase
+                    color: white
+                    display: block
+                    margin-bottom: 22px
+            .menu-footer
+                // margin-left: 50px
+                transition: all ease-in-out 1s
+                margin-top: 52px
+                // opacity: 0
+                p
+                    margin-bottom: 18px
+                    &:last-child
+                        margin-bottom: 0
+                .button
+                    margin-top: 24px
+            &.show
+                right: 0
+                opacity: 1
+                .menu-header
+                    // opacity: 1
+                .menu-nav
+                    // opacity: 1
+                    // margin-left: 0
+                .menu-footer
+                    // opacity: 1
+                    // margin-left: 0
