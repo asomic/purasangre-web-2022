@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import "../styles/header.sass";
+import { StaticImage } from "gatsby-plugin-image";
+
+import WhatsappIcon from "../images/icon-whatsapp.svg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +20,7 @@ const Header = () => {
       <div className="header-inner">
         <div className="brand">
           <Link to="/">
-            <img src="/static/images/logo.svg" alt="Pura Sangre CrossFit" />
+            <StaticImage src="../images/logo.svg" alt="Pura Sangre CrossFit" />
           </Link>
         </div>
         <div
@@ -29,7 +32,7 @@ const Header = () => {
         <div className={`menu ${menuOpen ? "show" : ""}`}>
           <div className="menu-header">
             <Link to="/">
-              <img src="/static/images/logo.svg" alt="Pura Sangre CrossFit" />
+              <StaticImage src="../images/logo.svg" alt="Pura Sangre CrossFit" />
             </Link>
           </div>
           <div className="menu-nav">
@@ -66,7 +69,7 @@ const Header = () => {
               8:30 a 13:00 hrs
             </p>
             <a className="button pink">
-              <img src="/static/images/icon-whatsapp.svg" />
+              <img src={WhatsappIcon} />
               Contáctanos via Whatsapp &gt;
             </a>
           </div>

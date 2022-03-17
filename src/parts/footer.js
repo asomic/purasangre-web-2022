@@ -1,5 +1,10 @@
 import * as React from "react";
 
+import emblemIcon from "../images/emblem.svg";
+import crossfitJournalIcon from "../images/crossfit-journal.png";
+import instagramIcon from "../images/instagram.svg";
+import facebookIcon from "../images/facebook.svg";
+
 const Footer = () => {
   return (
     <footer>
@@ -7,7 +12,7 @@ const Footer = () => {
         <div className="brands">
           <div className="brand">
             <img
-              src="/static/images/emblem.svg"
+              src={emblemIcon}
               alt="Emblema Pura Sangre CrossFit"
             />
           </div>
@@ -16,20 +21,20 @@ const Footer = () => {
               href="http://journal.crossfit.com/start.tpl?version=CFJ-white123x63"
               target="_blank"
             >
-              <img src="/static/images/crossfit-journal.png" />
+              <img src={crossfitJournalIcon} />
             </a>
           </div>
         </div>
         <div className="credits-wrapper">
           <div className="rrss">
             <a href="https://www.instagram.com/purasangrecf/" target="_blank">
-              <img src="/static/images/instagram.svg" />
+              <img src={instagramIcon} />
             </a>
             <a
               href="https://www.facebook.com/purasangrecrossfit/"
               target="_blank"
             >
-              <img src="/static/images/facebook.svg" />
+              <img src={facebookIcon} />
             </a>
           </div>
           <div className="credits">
