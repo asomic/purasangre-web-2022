@@ -48,7 +48,7 @@ const Slider = () => {
               style={{ backgroundImage: `url(${obj.img})` }}
             ></div>
             <div className="info">
-              {obj.data.pretitle ? <p>{obj.data.pretitle}</p> : ""}
+              {obj.data.pretitle ? <h4>{obj.data.pretitle}</h4> : ""}
               <h1 dangerouslySetInnerHTML={{ __html: obj.data.title }}></h1>
               {obj.data.button ? (
                 <a href={obj.data.button.link}>{obj.data.button.text}</a>
