@@ -1,11 +1,7 @@
 @import reset
 
 // Colors
-$turquoiseBlue: #01FFEA
-$mexicanPink: #ED0386
-$eerieBlack: #212121
-$lightGray: #D3D3D3
-$sonicSilver: #7A7A7A
+@import colors
 
 .color-turquoiseBlue
   color: $turquoiseBlue
@@ -33,21 +29,29 @@ h1
   letter-spacing: -0.02em
   font-weight: 800
   line-height: 100%
+  text-transform: uppercase
 h2
   font-size: 30px
   letter-spacing: -0.02em
   font-weight: 800
   line-height: 100%
+  text-transform: uppercase
 h3
   font-size: 26px
   letter-spacing: -0.02em
   line-height: 100%
+  text-transform: uppercase
 h4
   font-size: 21px
   letter-spacing: -0.02em
   line-height: 100%
+  text-transform: uppercase
 
-strong
+.regular
+  font-weight: 400
+
+strong,
+.bold
   font-weight: 700
 
 .italic
@@ -68,5 +72,8 @@ strong
   &.pink
     color: $mexicanPink
     border-color: $mexicanPink
+  &.turquoise
+    color: $turquoiseBlue
+    border-color: $turquoiseBlue
 
   
