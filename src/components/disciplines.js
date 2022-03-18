@@ -34,8 +34,8 @@ const Disciplines = () => {
               alt="Logo de Crossfit"
             />
             <h4 className="regular">
-              El <span className="bold italic">único box certificado</span> de
-              la región
+              <span className="bold italic">único box certificado</span> de la
+              región
             </h4>
             <p>
               Entrena en un lugar seguro con altos estándares y{" "}

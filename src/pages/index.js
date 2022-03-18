@@ -4,6 +4,7 @@ import Slider from "../components/Sliders";
 import Layout from "../parts/layout";
 import Disciplines from "../components/disciplines";
 import Memberships from "../components/memberships";
+import ScheduleCTA from "../components/scheduleCTA";
 
 const IndexPage = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage = () => {
       <Slider />
       <Disciplines />
       <Memberships />
+      <ScheduleCTA />
     </Layout>
   );
 };

@@ -1,52 +1,35 @@
-// import * as React from "react";
-import React, { useState } from "react";
-import { useSwipeable } from "react-swipeable";
+import * as React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import "../styles/slider.sass";
 import dataSlider from "../lib/dataSlider";
 
 const Slider = () => {
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  const nextSlide = () => {
-    if (slideIndex !== dataSlider.length) {
-      setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === dataSlider.length) {
-      setSlideIndex(1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (slideIndex !== 1) {
-      setSlideIndex(slideIndex - 1);
-    } else if (slideIndex === 1) {
-      setSlideIndex(dataSlider.length);
-    }
-  };
-
-  const handlers = useSwipeable({
-    onSwipedLeft: () => nextSlide(),
-    onSwipedRight: () => prevSlide(),
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-  });
-
-  const moveDot = (index) => {
-    setSlideIndex(index);
-  };
-
   return (
-    <div className="container-slider">
+    <Swiper
+      modules={[Pagination, Autoplay]}
+      spaceBetween={0}
+      slidesPerView={1}
+      loop={true}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
+      pagination={{ clickable: true }}
+      onSlideChange={() => console.log("slide change")}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
       {dataSlider.map((obj, index) => {
         return (
-          <div
-            className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+          <SwiperSlide
             key={index}
-            {...handlers}
+            style={{ backgroundImage: `url(${obj.img})` }}
           >
-            <div
-              className="img"
-              style={{ backgroundImage: `url(${obj.img})` }}
-            ></div>
             <div className="info">
               {obj.data.pretitle ? <h4>{obj.data.pretitle}</h4> : ""}
               <h1 dangerouslySetInnerHTML={{ __html: obj.data.title }}></h1>
@@ -56,20 +39,10 @@ const Slider = () => {
                 ""
               )}
             </div>
-          </div>
+          </SwiperSlide>
         );
       })}
-
-      <div className="container-dots">
-        {Array.from({ length: dataSlider.length }).map((item, index) => (
-          <div
-            onClick={() => moveDot(index + 1)}
-            className={slideIndex === index + 1 ? "dot active" : "dot"}
-            key={index}
-          ></div>
-        ))}
-      </div>
-    </div>
+    </Swiper>
   );
 };
 
