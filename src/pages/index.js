@@ -5,6 +5,7 @@ import Layout from "../parts/layout";
 import Disciplines from "../components/disciplines";
 import Memberships from "../components/memberships";
 import ScheduleCTA from "../components/scheduleCTA";
+import Coaches from "../components/coaches";
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <Disciplines />
       <Memberships />
       <ScheduleCTA />
+      <Coaches />
     </Layout>
   );
 };
