@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import "../styles/slider.sass";
-import dataSlider from "./dataSlider";
+import dataSlider from "../lib/dataSlider";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(1);
