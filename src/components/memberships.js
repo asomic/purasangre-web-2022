@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 import "../styles/memberships.sass";
+import dataMemberships from "../lib/dataMemberships";
 
 const Memberships = () => {
   return (
@@ -11,26 +12,28 @@ const Memberships = () => {
       </div>
       <div className="memberships-cards">
         {/* Card */}
-        <div className="membership-card">
-          <div className="membership-card-header">
-            <p>Plan</p>
-            <h2>Full Mensual</h2>
-          </div>
-          <div className="membership-card-info">
-            <p>
-              1 clase por día <br />
-              Cualquier horario
-            </p>
-          </div>
-          <div className="membership-card-footer">
-            <div className="price">
-              <h4>$50.000</h4> <span>/mes</span>
+        {dataMemberships.map((item, index) => (
+          <div className="membership-card" key={index}>
+            <div className="membership-card-header">
+              <p>Plan</p>
+              <h2>{item.name}</h2>
             </div>
-            <a href="" className="button turquoise">
-              Comprar &gt;
-            </a>
+            <div className="membership-card-info">
+              <p>
+                {item.days} <br />
+                {item.hours}
+              </p>
+            </div>
+            <div className="membership-card-footer">
+              <div className="price">
+                <h4>&#36;{item.price}</h4> <span>/mes</span>
+              </div>
+              <a href="" className="button turquoise">
+                Comprar &gt;
+              </a>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
       <Link to="/planes" className="button pink">
         Ver todos los planes &gt;
