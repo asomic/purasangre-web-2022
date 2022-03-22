@@ -6,6 +6,9 @@ import Disciplines from "../components/disciplines";
 import Memberships from "../components/memberships";
 import ScheduleCTA from "../components/scheduleCTA";
 import Coaches from "../components/coaches";
+import Values from "../components/values";
+import TheApp from "../components/theApp";
+import Contact from "../components/contact";
 
 const IndexPage = () => {
   return (
@@ -15,6 +18,9 @@ const IndexPage = () => {
       <Memberships />
       <ScheduleCTA />
       <Coaches />
+      <Values />
+      <TheApp />
+      <Contact />
     </Layout>
   );
 };

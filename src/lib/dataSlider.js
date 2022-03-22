@@ -10,6 +10,19 @@ const dataSlider = [
         "<span class=italic>La comunidad fitness</span><br /> <span class=color-turquoiseBlue>más grande de la vii región</span>",
     },
   },
+  {
+    id: uuidv4(),
+    img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+    data: {
+      // pretitle: "Bienvenido a",
+      title:
+        "<span class=italic>Encuentra un</span> <span class=color-turquoiseBlue>Horario a tu medida</span>",
+      button: {
+        text: "explora nuestros horarios",
+        link: "horarios",
+      },
+    },
+  },
   // {
   //   id: uuidv4(),
   //   title: "Lorem ipsum",
