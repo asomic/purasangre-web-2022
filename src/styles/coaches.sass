@@ -1,5 +1,107 @@
 .coaches
-    padding: 40px 20px
+    padding: 40px 0
     .coaches-header
         text-align: center
-    .coaches-content
+        h1
+            margin-bottom: 24px
+    .coaches-content // .swiper & .swiper-wrapper
+        // height: auto
+        // height: 70vh
+        height: 570px
+        .swiper-wrapper
+            .coach // .swiper-slide
+                max-width: 83vw
+                box-sizing: border-box
+                margin: 
+                    left: 8.5vw
+                    right: 8.5vw
+
+                padding: 34px 26px 38px
+                box-sizing: border-box
+                border-radius: 10px
+                background-color: rgb(36, 36, 36)
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
+                position: relative
+                right: 0
+                transition: all ease 0.3s
+                .coach-header
+                    margin-bottom: 22px
+                    z-index: 2
+                    position: relative
+                    opacity: 1
+                    .pretitle //p
+                        letter-spacing: -0.02em
+                        text-transform: uppercase
+                    h2
+                        max-width: 60%
+                .coach-content
+                    z-index: 2
+                    position: relative
+                    opacity: 1
+                    .item
+                        margin-bottom: 16px
+                        .title //p
+                            font-weight: 700
+                            text-transform: uppercase
+                            margin-bottom: 2px
+                            opacity: 1
+                        p
+                            opacity: 0.9
+                            // font-size: 16px
+                            line-height: 135%
+                        ul
+                            list-style-type: "> "
+                            li
+                                // font-size: 16px
+                                // font-size: 15px
+                                line-height: 135%
+                                margin-left: 0.8em
+                                opacity: 0.9
+                                margin-bottom: 1px
+                        &:last-child
+                            margin-bottom: 0
+                &::before
+                    top: 0
+                    left: 0
+                    z-index: 1
+                    background-color: rgba(36, 36, 36, 0.9)
+                &.swiper-slide-next
+                    margin-left: -20px
+                &.swiper-slide-prev
+                    right: -52px
+                &:hover
+                    .coach-header,
+                    .coach-content
+                        // opacity: 0
+                    &::before
+                        // background-color: rgba(36, 36, 36, 0)
+
+
+// @media (hover: none) and (pointer: coarse)
+//     .coaches
+//         .coaches-header
+//             h1
+//         .coaches-content
+//             .swiper-wrapper
+//                 .coach
+//                     .coach-header
+//                         .pretitle
+//                         h2
+//                     .coach-content
+//                         .item
+//                             .title
+//                             p
+//                             ul
+//                                 li
+//                             &:last-child
+//                     &::before
+//                     &.swiper-slide-next
+//                     &.swiper-slide-prev
+//                     &:focus
+//                         .coach-header,
+//                         .coach-content
+//                             opacity: 1
+//                         &::before
+//                             background-color: rgba(36, 36, 36, 0.9)
