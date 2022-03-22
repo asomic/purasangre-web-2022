@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Footer from "./footer";
 import Header from "./header";
 import "../styles/globals.sass";
+import FixBar from "../components/fixBar";
 
 const Layout = ({ pageTitle, children }) => {
   return (
@@ -18,12 +19,10 @@ const Layout = ({ pageTitle, children }) => {
           rel="stylesheet"
         ></link>
       </Helmet>
-
       <Header />
-
       {children}
-
       <Footer />
+      <FixBar />
     </div>
   );
 };

@@ -32,7 +32,10 @@ const Header = () => {
         <div className={`menu ${menuOpen ? "show" : ""}`}>
           <div className="menu-header">
             <Link to="/">
-              <StaticImage src="../images/logo.svg" alt="Pura Sangre CrossFit" />
+              <StaticImage
+                src="../images/logo.svg"
+                alt="Pura Sangre CrossFit"
+              />
             </Link>
           </div>
           <div className="menu-nav">
@@ -68,7 +71,7 @@ const Header = () => {
               <br />
               8:30 a 13:00 hrs
             </p>
-            <a className="button pink">
+            <a className="button pink" target="_blank" rel="noreferrer">
               <img src={WhatsappIcon} />
               Contáctanos via Whatsapp &gt;
             </a>

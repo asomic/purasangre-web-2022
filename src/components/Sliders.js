@@ -21,8 +21,8 @@ const Slider = () => {
         disableOnInteraction: false,
       }}
       pagination={{ clickable: true }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
     >
       {dataSlider.map((obj, index) => {
         return (
@@ -34,7 +34,9 @@ const Slider = () => {
               {obj.data.pretitle ? <h4>{obj.data.pretitle}</h4> : ""}
               <h1 dangerouslySetInnerHTML={{ __html: obj.data.title }}></h1>
               {obj.data.button ? (
-                <a href={obj.data.button.link}>{obj.data.button.text}</a>
+                <a href={obj.data.button.link} className="button turquoise">
+                  {obj.data.button.text} &gt;
+                </a>
               ) : (
                 ""
               )}

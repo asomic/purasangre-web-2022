@@ -1,0 +1,60 @@
+@import '_colors'
+
+.values
+    background-color: $eerieBlack
+    .values-inner
+        // Cabecera de la seccion
+        padding: 34px 20px
+        .values-header
+            text-align: center
+            margin-bottom: 32px
+            img
+            h1
+        // Todo lo que hay debajo de la cabecera
+        .values-content
+            // Grid Cards cuadradas
+            .features-items
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: 1fr 1fr
+                grid-column-gap: 13px
+                grid-row-gap: 13px
+                .feature
+                    padding: 30px 12px 24px
+                    background-color: black
+                    border-radius: 10px
+                    text-align: center
+                    img
+                        height: 60px
+                        margin: 
+                            bottom: 10px
+                    p
+                        font-size: 14px
+                        text-transform: uppercase
+                        letter-spacing: -0.02em
+                        line-height: 120%
+                    p.highlight
+                        font-weight: 700
+                        font-size: 17px
+            // Grid Cards rectangulares
+            .values-items
+                .value
+                    border-radius: 10px
+                    margin-top: 14px
+                    background-color: black
+                    padding: 0 24px 26px
+                    box-sizing: border-box
+                    height: 200px
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: flex-end
+                    align-content: flex-end
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    h3
+                        font-weight: 700
+                        margin-bottom: 8px
+                    p
+                        font-size: 15px
+                        color: $lightGray
