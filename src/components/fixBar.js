@@ -1,27 +1,37 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../styles/fixBar.sass";
 
 import whatsAppWhiteIcon from "../images/icon-whatsAppWhite.svg";
 
 const FixBar = () => {
-  const [height, setHeight] = useState(0);
-  const ref = useRef(null);
+  const [barState, setBarState] = useState(true);
 
   useEffect(() => {
-    setHeight(ref.current.clientHeight);
-  });
+    if (window.localStorage.getItem("theme") == "closed") {
+      setBarState(false);
+    } else {
+      window.localStorage.setItem("theme", "showed");
+    }
+  }, []);
+
+  function closeBar() {
+    window.localStorage.setItem("theme", "closed");
+    setBarState(false);
+  }
+
   return (
     <>
-      <div className="fix-fix" style={{ height: height }}></div>
-      <div className="fix-bar" ref={ref}>
+      <div className={`fix-bar ${barState ? "" : "closed"}`}>
         <a>
           Obten&nbsp;<span className="bold">3 clases gratis</span>{" "}
           <span className="bold whatsappLink">
             <img src={whatsAppWhiteIcon} /> SOLICITA POR WHATSAPP
           </span>
         </a>
-        <div className="close"></div>
+        <div className="close" onClick={closeBar}>
+          ✕
+        </div>
       </div>
     </>
   );

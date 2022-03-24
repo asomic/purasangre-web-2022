@@ -4,7 +4,7 @@
     width: 100%
 
 .fix-bar
-    position: fixed
+    position: sticky
     bottom: 0
     z-index: 100
     padding: 14px 52px 16px
@@ -37,3 +37,12 @@
         border-radius: 5px
         width: 25px
         height: 25px
+        display: flex
+        justify-content: center
+        align-items: center
+    &.closed
+        // transition: all ease 0.2s
+        bottom: -80px
+        position: fixed
+    // .transition
+    //     transition: all ease 0.5s
