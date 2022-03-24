@@ -18,8 +18,16 @@ const TheApp = () => {
     <section className="theApp">
       <div className="theAppInner">
         <div className="theAppInnerImage">
-          <StaticImage src="../images/mockup-app.png" className="appImage" />
-          <StaticImage src="../images/mockup-app.png" className="appImage" />
+          <StaticImage
+            src="../images/mockup-app.png"
+            className="appImage"
+            alt="Preview App Pura Sangre CrossFit"
+          />
+          <StaticImage
+            src="../images/mockup-app.png"
+            className="appImage"
+            alt="Preview App Pura Sangre CrossFit"
+          />
         </div>
         <div className="theAppInnerData">
           <StaticImage src="../images/icon-app.png" alt="Pura Sangre app" />
