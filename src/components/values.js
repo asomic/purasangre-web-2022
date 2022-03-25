@@ -44,18 +44,27 @@ const Values = () => {
             </div>
           </div>
           <div className="values-items">
-            <div className="value" style={{ backgroundImage: "url()" }}>
+            <div
+              className="value"
+              style={{ backgroundImage: "url(/back-value1.jpg)" }}
+            >
               <h3>Sin egos</h3>
               <p>
                 Compite contigo mismo, potencia tus capacidades y los resultados
                 llegaran.
               </p>
             </div>
-            <div className="value" style={{ backgroundImage: "url()" }}>
+            <div
+              className="value"
+              style={{ backgroundImage: "url(/back-value2.jpg)" }}
+            >
               <h3>Compañerismo</h3>
               <p>El ambiente que se respira a diario en nuestro box.</p>
             </div>
-            <div className="value" style={{ backgroundImage: "url()" }}>
+            <div
+              className="value"
+              style={{ backgroundImage: "url(/back-value3.jpg)" }}
+            >
               <h3>Pasarlo bien</h3>
               <p>Somos diferentes a otros gimnasios, cada día es distinto.</p>
             </div>

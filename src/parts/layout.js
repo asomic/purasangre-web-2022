@@ -10,7 +10,7 @@ const Layout = ({ pageTitle, children }) => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Pura Sangre CrossFit - {pageTitle}</title>
+        <title>{pageTitle} — Pura Sangre CrossFit</title>
         {/* <link rel="canonical" href="http://purasangrecrossfit.cl" /> */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -15,7 +15,7 @@ const IndexPage = () => {
     <Layout pageTitle="La comunidad fitness más grande de la VII región">
       <Slider />
       <Disciplines />
-      <Memberships />
+      <Memberships summarized={true} title="Planes" moreLink={true} />
       <ScheduleCTA />
       <Coaches />
       <Values />

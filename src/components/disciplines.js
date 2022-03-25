@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import "../styles/disciplines.sass";
 import emblemIcon from "../images/emblem.svg";
+import { Link } from "gatsby";
 
 const Disciplines = () => {
   return (
@@ -16,18 +17,30 @@ const Disciplines = () => {
           </h1>
         </div>
         <div className="discipline-cards">
-          <div className="discipline-card">
+          <Link
+            to="/crossfit"
+            className="discipline-card"
+            style={{ backgroundImage: "url(/back-crossfit.jpg)" }}
+          >
             <h2>CrossFit</h2>
             <p>El core de Pura Sangre</p>
-          </div>
-          <div className="discipline-card">
+          </Link>
+          <Link
+            to="/personalizado"
+            className="discipline-card"
+            style={{ backgroundImage: "url(/back-personalizado.jpg)" }}
+          >
             <h2>Personalizado</h2>
             <p>Entrena CrossFit al ritmo que quieras</p>
-          </div>
-          <div className="discipline-card">
+          </Link>
+          <Link
+            to="/nutricion"
+            className="discipline-card"
+            style={{ backgroundImage: "url(/back-nutricion.jpg)" }}
+          >
             <h2>Nutrición</h2>
             <p>Complementa tus entrenamientos con una alimentación adecuada</p>
-          </div>
+          </Link>
           <div className="discipline-card-special">
             <StaticImage
               src="../images/crossfit-logo.png"
