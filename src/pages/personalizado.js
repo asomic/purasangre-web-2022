@@ -24,13 +24,11 @@ const PersonalizadoPage = () => {
           </div>
           <div className="info-card-data-body">
             <p>
-              El personalizado de CrossFit consiste en clases particulares de
-              CrossFit en el box con horario variable y personalizable.
-            </p>
-            <p>
-              El coach estará siempre a tu lado en los ejercicios motivándote y
-              corrigiendo los movimientos y posturas para poder sacar el máximo
-              de ti.
+              El entrenamiento personalizado está enfocado en lograr tus
+              objetivos con una planificación hecha exclusivamente para ti por
+              profesionales del CrossFit. El coach estará siempre a tu lado, te
+              irá enseñando, corrigiendo y motivando 1 a 1, para lograr tu mejor
+              versión
             </p>
           </div>
         </Infocarddata>
@@ -41,15 +39,17 @@ const PersonalizadoPage = () => {
             <h1 className="italic">personalizado</h1>
           </div>
           <div className="info-card-data-body">
-            <p>
-              Horario a convenir con el coach
-              <br />
-              Incluye un mes de consulta nutricional
-            </p>
+            <p>Horario a convenir con el coach</p>
             <div className="price">
               <p>
                 $130.000
-                <span>/mes</span>
+                <span>/mes (3 veces por semana)</span>
+              </p>
+            </div>
+            <div className="price">
+              <p>
+                $150.000
+                <span>/mes (5 veces por semana)</span>
               </p>
             </div>
             <a href="/" className="button pink">

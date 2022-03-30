@@ -23,35 +23,35 @@ const CrossfitPage = () => {
           </div>
           <div className="info-card-data-body">
             <p>
-              CrossFit es el deporte del fitness y se puede utilizar para lograr
-              cualquier objetivo, desde{" "}
-              <span className="bold">mejorar la salud</span> hasta{" "}
-              <span className="bold">perder peso</span>.
+              Es un método de entrenamiento basado en ejercicios constantemente
+              variados, con movimientos funcionales ejecutados a alta
+              intensidad.
             </p>
             <p>
-              Consiste en un estilo de vida que se caracteriza por ejercicios
-              seguros y eficaces combinados con una nutrición sana.
+              Se puede utilizar para lograr cualquier objetivo, desde mejorar la
+              salud hasta mejorar el rendimiento físico. Los entrenamientos
+              funcionan para todos, desde las personas que nunca han hecho
+              ejercicio y hasta los que han entrenado durante años, comparten
+              por igual los beneficios de CrossFit.
             </p>
           </div>
         </Infocarddata>
         <Infocardimage image="/back-2.jpg" />
         <Infocarddata>
           <div className="info-card-data-header">
-            <h1>Ejercicios</h1>
-            <p className="subtitle">de la vida diaria</p>
+            <h1>Clases guiadas</h1>
+            <p className="subtitle">Nunca estaras solo</p>
           </div>
           <div className="info-card-data-body">
             <p>
-              La magia está en los movimientos. Los entrenamientos son
-              diferentes cada día y se modifican para ayudar a cada persona a
-              lograr sus objetivos.
+              La magia está en el movimiento. Los entrenamientos de CrossFit son
+              diferentes cada día y se pueden modificar para ayudar a cada
+              persona a lograr sus objetivos.
             </p>
             <p>
-              CrossFit usa movimientos funcionales y efectivos{" "}
-              <span className="bold">
-                similares a los que usas en tu día a día
-              </span>
-              .
+              Todas las clases son guiadas. Los coaches te enseñarán la correcta
+              ejecución de los movimientos, los cuales pueden adaptarse a
+              personas de cualquier edad y nivel de condición física.
             </p>
           </div>
         </Infocarddata>

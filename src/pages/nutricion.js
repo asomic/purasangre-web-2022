@@ -18,29 +18,45 @@ const NutricionPage = () => {
         <Infocardimage image="" />
         <Infocarddata>
           <div className="info-card-data-header">
-            <h1>Título 1</h1>
+            <h1>La base de tus Resultados</h1>
           </div>
           <div className="info-card-data-body">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-              velit iure optio aperiam. Nesciunt a non id illum qui consectetur
-              quae aliquid iure, ipsa ex omnis temporibus? Temporibus,
-              blanditiis aut!
+              En pura sangre contamos con profesionales nutricionistas que te
+              educaran sobre una alimentación saludable y realizarán una
+              planificación alimentaria personalizada a medida de tus objetivos.
             </p>
           </div>
         </Infocarddata>
         <Infocardimage image="" />
         <Infocarddata>
           <div className="info-card-data-header">
-            <h1>Título 2</h1>
+            <h1>Nuestros Servicio Nutricional</h1>
+            <p className="subtitle">Consta de</p>
           </div>
           <div className="info-card-data-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-              velit iure optio aperiam. Nesciunt a non id illum qui consectetur
-              quae aliquid iure, ipsa ex omnis temporibus? Temporibus,
-              blanditiis aut!
-            </p>
+            <ul>
+              <li>Anamnesis Completa</li>
+              <li>
+                Antropometría: Mediciones (Peso, Talla, % de grasa, % masa
+                muscular)
+              </li>
+              <li>Educación Alimentaria</li>
+              <li>Pauta de Alimentación personalizada</li>
+              <li>Recetario de Regalo</li>
+            </ul>
+            <div className="price">
+              <p>
+                $30.000
+                <span>/consulta</span>
+              </p>
+            </div>
+            <div className="price">
+              <p>
+                $65.000
+                <span>plan trimestral</span>
+              </p>
+            </div>
           </div>
         </Infocarddata>
       </Infocards>

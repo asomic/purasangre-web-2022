@@ -23,7 +23,8 @@ const Disciplines = () => {
             style={{ backgroundImage: "url(/back-crossfit.jpg)" }}
           >
             <h2>CrossFit</h2>
-            <p>El core de Pura Sangre</p>
+            {/* <p>El core de Pura Sangre</p> */}
+            <p>Cambiando Vidas y Mejorando tu Salud</p>
           </Link>
           <Link
             to="/personalizado"
@@ -39,7 +40,7 @@ const Disciplines = () => {
             style={{ backgroundImage: "url(/back-nutricion.jpg)" }}
           >
             <h2>Nutrición</h2>
-            <p>Complementa tus entrenamientos con una alimentación adecuada</p>
+            <p>Complementa tus entrenamientos para lograr tus objetivos</p>
           </Link>
           <div className="discipline-card-special">
             <StaticImage
