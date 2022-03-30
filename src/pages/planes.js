@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../parts/layout";
 import PageHeader from "../components/pageHeader";
 import Memberships from "../components/memberships";
