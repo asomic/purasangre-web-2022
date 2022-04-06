@@ -10,7 +10,6 @@ const Header = () => {
   const [burgerChange, setBurgerChange] = useState(true);
 
   function menuTrigger() {
-    console.log("hice click!");
     menuOpen === true ? setMenuOpen(false) : setMenuOpen(true);
     burgerChange === true ? setBurgerChange(false) : setBurgerChange(true);
   }

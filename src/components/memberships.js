@@ -231,8 +231,6 @@ const Memberships = ({ summarized, title, moreLink }) => {
       });
   }, []);
 
-  console.log(membershipsData);
-
   return (
     <section className="memberships">
       <div className="memberships-header">
