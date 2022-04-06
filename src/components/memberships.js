@@ -228,7 +228,6 @@ const Memberships = ({ summarized, title, moreLink }) => {
           ...getPersonalizado(),
         ];
         setMembershipsData(thePlans);
-        // setMemberships(resultData.plans);
       });
   }, []);
 
