@@ -8,15 +8,18 @@ const FixBar = () => {
   const [barState, setBarState] = useState(true);
 
   useEffect(() => {
-    if (window.localStorage.getItem("theme") == "closed") {
-      setBarState(false);
-    } else {
-      window.localStorage.setItem("theme", "showed");
-    }
+    const obtenerLS = () => {
+      const barStateLS = JSON.parse(localStorage.getItem("theme")) ?? "showed";
+      setBarState(barStateLS);
+    };
+    obtenerLS();
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(barState));
+  }, [barState]);
+
   function closeBar() {
-    window.localStorage.setItem("theme", "closed");
     setBarState(false);
   }
 
