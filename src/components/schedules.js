@@ -1,36 +1,65 @@
 import React, { useState } from "react";
-
 import dataSchedules from "../lib/dataSchedules";
-
 import "../styles/schedules.sass";
 
 const Schedules = () => {
+  const generateID = () => {
+    const date = Date.now();
+    const random = Math.random().toString(36).substr(2);
+    return date + random;
+  };
+
   const [schedules, setSchedules] = useState(
-    dataSchedules[0].schedules.map((item) => {
-      return { ...item, membershipsShow: false };
+    dataSchedules.map((item) => {
+      return {
+        forDays: item.forDays,
+        priority: item.priority,
+        schedules: item.schedules.map((item) => {
+          return {
+            id: generateID(),
+            hour: item.hour,
+            discipline: item.discipline,
+            memberships: item.memberships,
+          };
+        }),
+        membershipsShow: false,
+      };
     })
   );
 
   const [firstClick, setOnFirstClick] = useState(true);
 
-  // console.log(schedules);
-
   const openAvailablePlans = (index) => {
     if (firstClick) {
       setSchedules(
-        schedules.map((item, i) => {
-          if (i === index) {
-            return { ...item, membershipsShow: true };
-          } else {
-            return { ...item, membershipsShow: false };
-          }
+        schedules.map((item) => {
+          return {
+            forDays: item.forDays,
+            priority: item.priority,
+            schedules: item.schedules.map((item) => {
+              if (item.id === index) {
+                return { ...item, membershipsShow: true };
+              } else {
+                return { ...item, membershipsShow: false };
+              }
+            }),
+          };
         })
       );
       setOnFirstClick(false);
     } else {
       setSchedules(
-        schedules.map((item, i) => {
-          return { ...item, membershipsShow: false };
+        schedules.map((item) => {
+          return {
+            forDays: item.forDays,
+            priority: item.priority,
+            schedules: item.schedules.map((item) => {
+              return {
+                ...item,
+                membershipsShow: false,
+              };
+            }),
+          };
         })
       );
       setOnFirstClick(true);
@@ -63,127 +92,79 @@ const Schedules = () => {
         </div>
       </div>
       <div className="schedule-table">
-        <div className="days">
-          <div className="head">
-            <h5>Lunes a Viernes</h5>
-          </div>
-          {schedules.map((schedule, index) => {
-            return (
-              <div className="card" key={index}>
-                <div className="card-head">
-                  <p className="hour">{schedule.hour}</p>
-                  <p className="discipline">{schedule.discipline}</p>
+        {schedules.map((days, index) => {
+          return (
+            <div className="days" key={index}>
+              <div className="head">
+                <h5>{days.forDays}</h5>
+              </div>
+              {days.schedules.map((schedule) => (
+                <div className="card" key={schedule.id}>
+                  <div className="card-head">
+                    <p className="hour">{schedule.hour}</p>
+                    <p className="discipline">{schedule.discipline}</p>
+                    <div
+                      className={`arrow ${
+                        schedule.membershipsShow ? "opened" : ""
+                      }`}
+                      onClick={() => openAvailablePlans(schedule.id)}
+                    >
+                      ▶
+                    </div>
+                  </div>
                   <div
-                    className={`arrow ${
-                      schedule.membershipsShow ? "opened" : ""
+                    className={`card-memberships ${
+                      schedule.membershipsShow ? "show" : ""
                     }`}
-                    onClick={() => openAvailablePlans(index)}
                   >
-                    ▶
+                    <p
+                      className={`membership ${
+                        schedule.memberships.full && "active"
+                      }`}
+                    >
+                      FULL
+                    </p>
+                    <p
+                      className={`membership ${
+                        schedule.memberships.doce && "active"
+                      }`}
+                    >
+                      12
+                    </p>
+                    <p
+                      className={`membership ${
+                        schedule.memberships.ocho && "active"
+                      }`}
+                    >
+                      8
+                    </p>
+                    <p
+                      className={`membership ${
+                        schedule.memberships.am && "active"
+                      }`}
+                    >
+                      AM
+                    </p>
+                    <p
+                      className={`membership ${
+                        schedule.memberships.lunch && "active"
+                      }`}
+                    >
+                      LUNCH
+                    </p>
+                    <p
+                      className={`membership ${
+                        schedule.memberships.est && "active"
+                      }`}
+                    >
+                      EST
+                    </p>
                   </div>
                 </div>
-                <div
-                  className={`card-memberships ${
-                    schedule.membershipsShow ? "show" : ""
-                  }`}
-                >
-                  <p
-                    className={`membership ${
-                      schedule.memberships.full && "active"
-                    }`}
-                  >
-                    FULL
-                  </p>
-                  <p
-                    className={`membership ${
-                      schedule.memberships.doce && "active"
-                    }`}
-                  >
-                    12
-                  </p>
-                  <p
-                    className={`membership ${
-                      schedule.memberships.ocho && "active"
-                    }`}
-                  >
-                    8
-                  </p>
-                  <p
-                    className={`membership ${
-                      schedule.memberships.am && "active"
-                    }`}
-                  >
-                    AM
-                  </p>
-                  <p
-                    className={`membership ${
-                      schedule.memberships.lunch && "active"
-                    }`}
-                  >
-                    LUNCH
-                  </p>
-                  <p
-                    className={`membership ${
-                      schedule.memberships.est && "active"
-                    }`}
-                  >
-                    EST
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="days">
-          <div className="head">
-            <h5>Sábados</h5>
-          </div>
-          <div className="card">
-            <div className="card-head">
-              <p className="hour">07:00 hrs</p>
-              <p className="discipline">CrossFit</p>
-              <div className="arrow opened">▶</div>
+              ))}
             </div>
-            <div className="card-memberships show">
-              <p className="membership active">FULL</p>
-              <p className="membership active">12</p>
-              <p className="membership active">8</p>
-              <p className="membership active">AM</p>
-              <p className="membership">LUNCH</p>
-              <p className="membership">EST</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-head">
-              <p className="hour">08:00 hrs</p>
-              <p className="discipline">CrossFit</p>
-              <div className="arrow">▶</div>
-            </div>
-            <div className="card-memberships">
-              <p className="membership active">FULL</p>
-              <p className="membership active">12</p>
-              <p className="membership active">8</p>
-              <p className="membership active">AM</p>
-              <p className="membership">LUNCH</p>
-              <p className="membership">EST</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-head">
-              <p className="hour">09:00 hrs</p>
-              <p className="discipline">CrossFit</p>
-              <div className="arrow">▶</div>
-            </div>
-            <div className="card-memberships">
-              <p className="membership active">FULL</p>
-              <p className="membership active">12</p>
-              <p className="membership active">8</p>
-              <p className="membership active">AM</p>
-              <p className="membership">LUNCH</p>
-              <p className="membership">EST</p>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </section>
   );
