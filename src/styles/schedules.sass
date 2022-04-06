@@ -1,9 +1,83 @@
 @import './_colors'
+
 .schedules
+    padding: 30px 20px
+    background-color: $eerieBlack
     .explanation
         background-color: $eerieBlackLight
+        padding: 20px
+        margin-bottom: 20px
         .title
             font-size: 16px
-            
+            font-weight: 800
+            text-transform: uppercase
+            letter-spacing: -0.02em
+            margin-bottom: 6px
         .explanation-content
+            p
+                font-size: 15px
+                text-transform: uppercase
+                margin-top: 4px
+                span
+                    margin-right: 8px
+                    color: $turquoiseBlue
     .schedule-table
+        .days
+            margin-bottom: 18px
+            .head
+                background-color: black
+                border-radius: 4px
+                margin-bottom: 6px
+                padding: 16px 23px
+                h5
+                    text-transform: uppercase
+                    font-weight: 800
+                    letter-spacing: -0.02em
+                    // font-size: 18px
+                    font-size: 17px
+                    color: $turquoiseBlue
+            .card
+                background-color: black
+                border-radius: 4px
+                margin-bottom: 6px
+                padding: 12px 23px 11px
+                .card-head
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    width: 100%
+                    // margin-bottom: 5px
+                    p.hour
+                        // width: 130px
+                        width: 76px
+                    p.discipline
+                        width: 100%
+                        font-weight: 700
+                    .arrow
+                        cursor: pointer
+                        font-size: 14px
+                        transform: rotate(90deg)
+                        transition: all ease-in-out 0.3s
+                        &.opened
+                            transform: rotate(-90deg)
+                .card-memberships
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    width: 100%
+                    box-sizing: border-box
+                    padding-right: 16%
+                    overflow: hidden
+                    margin-top: 5px
+                    height: 0
+                    transition: all ease-in-out 0.3s
+                    opacity: 0
+                    p.membership
+                        font-size: 15px
+                        color: $sonicSilver
+                        &.active
+                            color: $turquoiseBlue
+                    &.show
+                        transition: all ease-in-out 0.3s
+                        height: 100%
+                        opacity: 1
