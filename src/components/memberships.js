@@ -232,7 +232,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
   }, []);
 
   return (
-    <section className="memberships">
+    <section className={`memberships ${summarized ? "onIndex" : ""}`}>
       <div className="memberships-header">
         <h1 className="color-turquoiseBlue">{title}</h1>
       </div>
