@@ -241,7 +241,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
         {summarized
           ? membershipsData &&
             membershipsData
-              .slice(0, 5)
+              .slice(0, 6)
               .map((item, index) => (
                 <MembershipCard
                   memberships={item}

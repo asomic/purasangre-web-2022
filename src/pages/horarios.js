@@ -2,6 +2,7 @@ import * as React from "react";
 import Layout from "../parts/layout";
 import PageHeader from "../components/pageHeader";
 import Schedules from "../components/schedules";
+import Contact from "../components/contact";
 
 const HorariosPage = () => {
   return (
@@ -12,6 +13,7 @@ const HorariosPage = () => {
         image="/backpage-horarios.jpg"
       />
       <Schedules />
+      <Contact />
     </Layout>
   );
 };

@@ -1,6 +1,27 @@
 @import '_colors'
 
 .values
+    .values-inner
+        // Cabecera de la seccion
+        .values-header
+            img
+            h1
+        // Todo lo que hay debajo de la cabecera
+        .values-content
+            // Grid Cards cuadradas
+            .features-items
+                .feature
+                    img
+                    p
+                    p.highlight
+            // Grid Cards rectangulares
+            .values-items
+                .value
+                    &::before
+                    h3
+                    p
+
+.values
     background-color: $eerieBlack
     .values-inner
         // Cabecera de la seccion
@@ -47,8 +68,9 @@
                     height: 200px
                     display: flex
                     flex-wrap: wrap
-                    align-items: flex-end
-                    align-content: flex-end
+                    justify-content: flex-end
+                    flex-direction: column
+                    // align-content: flex-end
                     background-position: center
                     background-repeat: no-repeat
                     background-size: cover
@@ -70,8 +92,128 @@
                         margin-bottom: 8px
                         z-index: 2
                         position: relative
+                        display: block
                     p
                         font-size: 15px
                         color: $lightGray
                         z-index: 2
                         position: relative
+
+@media (min-width: 768px)
+    .values
+        .values-inner
+            // Cabecera de la seccion
+            padding: 50px 6vw 56px
+            .values-header
+                img
+                h1
+            // Todo lo que hay debajo de la cabecera
+            .values-content
+                // Grid Cards cuadradas
+                .features-items
+                    grid-template-columns: repeat(4, minmax(0, 1fr))
+                    grid-template-rows: 1fr
+                    .feature
+                        img
+                        p
+                        p.highlight
+                // Grid Cards rectangulares
+                .values-items
+                    // display: grid
+                    // grid-template-columns: repeat(3, minmax(0, 1fr))
+                    // grid-column-gap: 13px
+                    .value
+                        // height: 250px
+                        &::before
+                        h3
+                        p
+
+@media (min-width: 920px)
+    .values
+        .values-inner
+            // Cabecera de la seccion
+            padding: 50px 6vw 60px
+            .values-header
+                img
+                h1
+            // Todo lo que hay debajo de la cabecera
+            .values-content
+                // Grid Cards cuadradas
+                .features-items
+                    grid-template-columns: repeat(4, minmax(0, 1fr))
+                    grid-template-rows: 1fr
+                    .feature
+                        img
+                        p
+                        p.highlight
+                // Grid Cards rectangulares
+                .values-items
+                    display: grid
+                    grid-template-columns: repeat(3, minmax(0, 1fr))
+                    grid-column-gap: 13px
+                    .value
+                        // height: 250px
+                        &::before
+                        h3
+                        p
+
+@media (min-width: 1200px)
+    .values
+        .values-inner
+            padding: 50px 7.5vw 60px
+            // Cabecera de la seccion
+            .values-header
+                img
+                h1
+            // Todo lo que hay debajo de la cabecera
+            .values-content
+                // Grid Cards cuadradas
+                .features-items
+                    // grid-template-columns: repeat(4, minmax(0, 1fr))
+                    // grid-template-rows: 1fr
+                    grid-column-gap: 16px
+                    .feature
+                        padding: 40px 12px 32px
+                        img
+                            height: 70px
+                            margin: 
+                                bottom: 12px
+                        p
+                        p.highlight
+                // Grid Cards rectangulares
+                .values-items
+                    // display: grid
+                    // grid-template-columns: repeat(3, minmax(0, 1fr))
+                    grid-column-gap: 16px
+                    .value
+                        height: 230px
+                        &::before
+                        h3
+                        p
+
+@media (min-width: 1300px)
+    .values
+        .values-inner
+            padding: 50px 0 60px
+            // Cabecera de la seccion
+            .values-header
+                img
+                h1
+            // Todo lo que hay debajo de la cabecera
+            .values-content
+                max-width: 1160px
+                margin: 
+                    left: auto
+                    right: auto
+                // Grid Cards cuadradas
+                .features-items
+                    .feature
+                        img
+                        p
+                        p.highlight
+                // Grid Cards rectangulares
+                .values-items
+                    .value
+                        &::before
+                        h3
+                        p

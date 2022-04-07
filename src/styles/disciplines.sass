@@ -1,6 +1,19 @@
 @import colors
 
 .disciplines
+    .disciplines-inner
+        .disciplines-header
+            img
+            h1
+        .discipline-cards
+            .discipline-card
+                h2
+                p
+                &::after
+            .discipline-card-special
+                h4
+
+.disciplines
     padding: 38px 20px 44px
     background-color: $eerieBlack
     .disciplines-inner
@@ -61,3 +74,94 @@
                 h4
                     margin-top: 22px
                     margin-bottom: 10px
+
+@media (min-width: 768px)
+    .disciplines
+        padding: 48px 6vw 52px
+        .disciplines-inner
+            .disciplines-header
+                margin-bottom: 38px
+                img
+                h1
+                    display: flex
+                    justify-content: center
+                    span
+                        margin: 0 6px
+            .discipline-cards
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: 3fr
+                grid-column-gap: 18px
+                .discipline-card
+                    h2
+                    p
+                    &::after
+                    &:nth-child(1)
+                        grid-column-start: 1
+                        grid-column-end: 3
+                    &:nth-child(2)
+                        grid-column-start: 1
+                        grid-column-end: 2
+                    &:nth-child(3)
+                        grid-column-start: 2
+                        grid-column-end: 3
+                .discipline-card-special
+                    // width: 100%
+                    grid-column-start: 1
+                    grid-column-end: 3
+                    height: 260px
+                    padding: 0 10vw
+                    h4
+                    p
+                        width: 80%
+
+@media (min-width: 920px)
+    .disciplines
+        .disciplines-inner
+            .disciplines-header
+                img
+                h1
+            .discipline-cards
+                .discipline-card
+                    height: 280px
+                    h2
+                    p
+                    &::after
+                .discipline-card-special
+                    h4
+
+@media (min-width: 1200px)
+    .disciplines
+        padding: 48px 7.5vw 52px
+        .disciplines-inner
+            .disciplines-header
+                img
+                h1
+            .discipline-cards
+                .discipline-card
+                    height: 320px
+                    h2
+                    p
+                    &::after
+                .discipline-card-special
+                    h4
+
+@media (min-width: 1300px)
+    .disciplines
+        padding: 48px 0 52px
+        .disciplines-inner
+            max-width: 1160px
+            margin: 
+                left: auto
+                right: auto
+            .disciplines-header
+                img
+                h1
+            .discipline-cards
+                .discipline-card
+                    height: 320px
+                    h2
+                    p
+                    &::after
+                .discipline-card-special
+                    h4

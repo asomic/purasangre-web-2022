@@ -1,6 +1,14 @@
 @import 'colors'
 
 .contact
+    .contactInner
+        .map
+        .data
+            h1
+            p
+            a
+
+.contact
     padding: 45px 20px 48px
     .contactInner
         .map
@@ -16,3 +24,57 @@
                 margin-bottom: 18px
             a
                 margin-top: 12px
+
+@media (min-width: 768px)
+    .contact
+        padding: 54px 6vw 58px
+        .contactInner
+            .map
+                margin: 
+                    bottom: 0
+            .data
+                h1
+                p
+                a
+
+@media (min-width: 920px)
+    .contact
+        padding: 60px 6vw 64px
+        .contactInner
+            display: flex
+            justify-content: space-between
+            .map
+                height: 370px
+                order: 2
+                width: 55%
+            .data
+                order: 1
+                width: 35%
+                h1
+                p
+                a
+
+@media (min-width: 1200px)
+    .contact
+        padding: 64px 7.5vw 68px
+        .contactInner
+            .map
+            .data
+                h1
+                p
+                a
+
+@media (min-width: 1400px)
+    .contact
+        padding: 64px 0 68px
+        .contactInner
+            margin: 
+                left: auto
+                right: auto
+            max-width: 1160px
+            .map
+                width: 50%
+            .data
+                h1
+                p
+                a

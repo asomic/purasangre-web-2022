@@ -49,13 +49,10 @@
                             opacity: 1
                         p
                             opacity: 0.9
-                            // font-size: 16px
                             line-height: 135%
                         ul
                             list-style-type: "> "
                             li
-                                // font-size: 16px
-                                // font-size: 15px
                                 line-height: 135%
                                 margin-left: 0.8em
                                 opacity: 0.9
@@ -70,39 +67,38 @@
                 &.swiper-slide-next
                     margin-left: -5vw
                 &.swiper-slide-prev
-                    // margin-right: 5vw
                     right: -14vw
                 &:hover
                     .coach-header,
                     .coach-content
-                        // opacity: 0
                     &::before
-                        // background-color: rgba(36, 36, 36, 0)
 
-
-// @media (hover: none) and (pointer: coarse)
-//     .coaches
-//         .coaches-header
-//             h1
-//         .coaches-content
-//             .swiper-wrapper
-//                 .coach
-//                     .coach-header
-//                         .pretitle
-//                         h2
-//                     .coach-content
-//                         .item
-//                             .title
-//                             p
-//                             ul
-//                                 li
-//                             &:last-child
-//                     &::before
-//                     &.swiper-slide-next
-//                     &.swiper-slide-prev
-//                     &:focus
-//                         .coach-header,
-//                         .coach-content
-//                             opacity: 1
-//                         &::before
-//                             background-color: rgba(36, 36, 36, 0.9)
+@media (min-width: 768px)
+    .coaches
+        .coaches-header
+            h1
+        .coaches-content // .swiper & .swiper-wrapper
+            .swiper-wrapper
+                .coach // .swiper-slide
+                    max-width: 30vw
+                    margin: 
+                        left: 3.33vw
+                    .coach-header
+                        .pretitle //p
+                        h2
+                    .coach-content
+                        .item
+                            .title //p
+                            p
+                            ul
+                                li
+                            &:last-child
+                    &::before
+                    &.swiper-slide-next
+                        margin-right: 0
+                    &.swiper-slide-prev
+                        right: 0
+                    &:hover
+                        .coach-header,
+                        .coach-content
+                        &::before

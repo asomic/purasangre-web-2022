@@ -1,6 +1,24 @@
 @import 'colors'
 
 .footer
+    .footer-inner
+        .brands
+            .brand
+                img
+            .certified
+                a
+                    img
+        .credits-wrapper
+            .rrss
+                a
+                    img
+            .credits
+                p
+                    span
+                    a
+
+
+.footer
     width: 100%
     padding: 33px 20px 40px
     background-color: $eerieBlack
@@ -45,3 +63,79 @@
                     a
                         opacity: 1
                         color: white
+
+@media (min-width:768px)
+    .footer
+        padding: 38px 6vw 42px
+        .footer-inner
+            .brands
+                .brand
+                    img
+                .certified
+                    a
+                        img
+            .credits-wrapper
+                display: flex
+                justify-content: space-between
+                align-items: center
+                .rrss
+                    margin-bottom: 0
+                    a
+                        margin: 0 5px 0 0
+                        img
+                .credits
+                    p
+                        span
+                        a
+
+@media (min-width: 1200px)
+    .footer
+        padding: 38px 7.5vw 42px
+        .footer-inner
+            .brands
+                .brand
+                    img
+                .certified
+                    a
+                        img
+            .credits-wrapper
+                // display: flex
+                // justify-content: space-between
+                // align-items: center
+                .rrss
+                    // margin-bottom: 0
+                    a
+                        // margin: 0 5px 0 0
+                        img
+                .credits
+                    p
+                        span
+                        a
+
+@media (min-width: 1300px)
+    .footer
+        padding: 38px 0 42px
+        .footer-inner
+            margin: 
+                left: auto
+                right: auto
+            max-width: 1160px
+            .brands
+                .brand
+                    img
+                .certified
+                    a
+                        img
+            .credits-wrapper
+                // display: flex
+                // justify-content: space-between
+                // align-items: center
+                .rrss
+                    // margin-bottom: 0
+                    a
+                        // margin: 0 5px 0 0
+                        img
+                .credits
+                    p
+                        span
+                        a

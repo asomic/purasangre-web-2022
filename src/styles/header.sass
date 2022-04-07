@@ -1,4 +1,32 @@
 .header
+    .header-inner
+        .brand
+            img
+        .burger
+            .meat
+                &::before,
+                &::after
+                &::before
+                &::after
+            &.close
+                .meat
+                    &::before
+                    &::after
+        .menu
+            .menu-header
+                img
+            .menu-nav
+                a
+            .menu-footer
+                p
+                    &:last-child
+                .button
+            &.show
+                .menu-header
+                .menu-nav
+                .menu-footer
+
+.header
     margin: auto
     padding: 26px 24px
     box-sizing: border-box
@@ -111,3 +139,159 @@
                 .menu-footer
                     // opacity: 1
                     // margin-left: 0
+
+@media (min-width: 768px)
+    .header
+        padding: 38px 6vw
+        .header-inner
+            .brand
+                img
+            .burger
+                .meat
+                    &::before,
+                    &::after
+                    &::before
+                    &::after
+                &.close
+                    .meat
+                        &::before
+                        &::after
+            .menu
+                padding: 0 6vw
+                .menu-header
+                    padding: 38px 0 24px
+                    img
+                .menu-nav
+                    a
+                .menu-footer
+                    p
+                        &:last-child
+                    .button
+                &.show
+                    .menu-header
+                    .menu-nav
+                    .menu-footer
+
+@media (min-width: 920px)
+    .header
+        padding: 42px 6vw
+        .header-inner
+            .brand
+                img
+                    width: 122px
+            .burger
+                display: none
+                .meat
+                    &::before,
+                    &::after
+                    &::before
+                    &::after
+                &.close
+                    .meat
+                        &::before
+                        &::after
+            .menu
+                // padding: 0 6vw
+                transition: none
+                position: relative
+                width: auto
+                height: auto
+                background-color: transparent
+                background-image: none
+                top: auto
+                left: auto
+                right: auto
+                padding: 0
+                opacity: 1
+                margin: 0
+                .menu-header
+                    transition: none
+                    display: none
+                    img
+                .menu-nav
+                    transition: none
+                    margin-top: 0
+                    display: flex
+                    a
+                        margin-bottom: 0
+                        margin-left: 42px
+                        font-size: 15px
+                .menu-footer
+                    transition: none
+                    display: none
+                    p
+                        &:last-child
+                    .button
+                &.show
+                    right: auto
+                    .menu-header
+                    .menu-nav
+                    .menu-footer
+
+@media (min-width: 1200px)
+    .header
+        padding: 45px 7.5vw
+        .header-inner
+            .brand
+                img
+                    // width: 122px
+            .burger
+                display: none
+                .meat
+                    &::before,
+                    &::after
+                    &::before
+                    &::after
+                &.close
+                    .meat
+                        &::before
+                        &::after
+            .menu
+                // padding: 0 6vw
+                .menu-header
+                    img
+                .menu-nav
+                    a
+                .menu-footer
+                    p
+                        &:last-child
+                    .button
+                &.show
+                    .menu-header
+                    .menu-nav
+                    .menu-footer
+
+@media (min-width: 1300px)
+    .header
+        padding: 45px 0
+        .header-inner
+            margin: auto
+            max-width: 1160px
+            .brand
+                img
+                    // width: 122px
+            .burger
+                display: none
+                .meat
+                    &::before,
+                    &::after
+                    &::before
+                    &::after
+                &.close
+                    .meat
+                        &::before
+                        &::after
+            .menu
+                // padding: 0 6vw
+                .menu-header
+                    img
+                .menu-nav
+                    a
+                .menu-footer
+                    p
+                        &:last-child
+                    .button
+                &.show
+                    .menu-header
+                    .menu-nav
+                    .menu-footer

@@ -1,9 +1,31 @@
 @import './_colors'
 
 .schedules
+    .explanation
+        .title
+        .explanation-content
+            p
+                span
+    .schedule-table
+        .days
+            .head
+                h5
+            .card
+                .card-head
+                    p.hour
+                    p.discipline
+                    .arrow
+                        &.opened
+                .card-memberships
+                    p.membership
+                        &.active
+                    &.show
+
+.schedules
     padding: 30px 20px
     background-color: $eerieBlack
     .explanation
+        box-sizing: border-box
         background-color: $eerieBlackLight
         padding: 20px
         margin-bottom: 20px
@@ -81,3 +103,92 @@
                         transition: all ease-in-out 0.3s
                         height: 100%
                         opacity: 1
+
+@media (min-width: 768px)
+    .schedules
+        padding: 34px 6vw 44px
+        .explanation
+            .title
+            .explanation-content
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                p
+                    span
+        .schedule-table
+            display: grid
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+            grid-column-gap: 14px
+            .days
+                margin-bottom: 0
+                .head
+                    h5
+                .card
+                    .card-head
+                        p.hour
+                        p.discipline
+                        .arrow
+                            &.opened
+                    .card-memberships
+                        p.membership
+                            &.active
+                        &.show
+
+@media (min-width: 1200px)
+    .schedules
+        padding: 34px 7.5vw 44px
+        .explanation
+            .title
+            .explanation-content
+                // display: grid
+                // grid-template-columns: repeat(3, 1fr)
+                p
+                    span
+        .schedule-table
+            // display: grid
+            // grid-template-columns: repeat(2, minmax(0, 1fr))
+            // grid-column-gap: 14px
+            .days
+                // margin-bottom: 0
+                .head
+                    h5
+                .card
+                    .card-head
+                        p.hour
+                        p.discipline
+                        .arrow
+                            &.opened
+                    .card-memberships
+                        p.membership
+                            &.active
+                        &.show
+
+@media (min-width: 1300px)
+    .schedules
+        padding: 34px 0 44px
+        .explanation
+            max-width: 1160px
+            margin: 
+                left: auto
+                right: auto
+            .title
+            .explanation-content
+                p
+                    span
+        .schedule-table
+            max-width: 1160px
+            margin: 
+                left: auto
+                right: auto
+            .days
+                .head
+                    h5
+                .card
+                    .card-head
+                        p.hour
+                        p.discipline
+                        .arrow
+                            &.opened
+                    .card-memberships
+                        p.membership
+                            &.active
+                        &.show

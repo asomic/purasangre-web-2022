@@ -4,7 +4,7 @@
     background-color: $eerieBlack
     border-radius: 10px
     margin-bottom: 16px
-    padding: 24px 22px
+    padding: 24px 22px 16px
     .membership-card-header
         margin-bottom: 36px
         p
@@ -31,6 +31,21 @@
     &.mDisplay
         &:nth-child(n+4)
             display: none
+
+@media (min-width: 768px)
+    .membership-card
+        margin-bottom: 0
+        .membership-card-header
+            p
+            h2
+        .membership-card-info
+            p
+        .membership-card-footer
+            .price
+                h4
+                    span
+        &.mDisplay
+            &:nth-child(n+4)
 
 .onIndex
     .mem
