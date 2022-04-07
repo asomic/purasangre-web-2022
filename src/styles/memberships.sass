@@ -11,8 +11,14 @@
         margin-bottom: 26px
         h1
     .memberships-cards
-        margin-bottom: 28px
+        margin-bottom: 28px     
     &>.button
         margin: auto
         text-align: center
         display: table
+    &.onIndex
+        .memberships-cards
+            .membership-card
+                &:nth-child(n+5)
+                    display: none
+                
