@@ -107,6 +107,10 @@
             .values-header
                 img
                 h1
+                    display: flex
+                    justify-content: center
+                    span
+                        margin-right: 12px
             // Todo lo que hay debajo de la cabecera
             .values-content
                 // Grid Cards cuadradas
@@ -115,6 +119,8 @@
                     grid-template-rows: 1fr
                     .feature
                         img
+                            // margin: 
+                            //     bottom: 12px
                         p
                         p.highlight
                 // Grid Cards rectangulares
@@ -160,7 +166,7 @@
 @media (min-width: 1200px)
     .values
         .values-inner
-            padding: 50px 7.5vw 60px
+            padding: 50px 8vw 60px
             // Cabecera de la seccion
             .values-header
                 img
@@ -175,11 +181,13 @@
                     .feature
                         padding: 40px 12px 32px
                         img
-                            height: 70px
+                            height: 80px
                             margin: 
                                 bottom: 12px
                         p
+                            font-size: 16px
                         p.highlight
+                            font-size: 26px
                 // Grid Cards rectangulares
                 .values-items
                     // display: grid
@@ -190,13 +198,15 @@
                         &::before
                         h3
                         p
+                            font-size: 16px
 
-@media (min-width: 1300px)
+@media (min-width: 1400px)
     .values
         .values-inner
-            padding: 50px 0 60px
+            padding: 56px 0 68px
             // Cabecera de la seccion
             .values-header
+                margin-bottom: 40px
                 img
                 h1
             // Todo lo que hay debajo de la cabecera
@@ -208,6 +218,7 @@
                 // Grid Cards cuadradas
                 .features-items
                     .feature
+                        padding: 44px 12px 34px
                         img
                         p
                         p.highlight

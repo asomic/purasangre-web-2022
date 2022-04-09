@@ -135,7 +135,7 @@
 
 @media (min-width: 1200px)
     .schedules
-        padding: 34px 7.5vw 44px
+        padding: 34px 8vw 44px
         .explanation
             .title
             .explanation-content
@@ -152,19 +152,28 @@
                 .head
                     h5
                 .card
+                    display: flex
+                    justify-content: space-between
+                    padding: 12px 26px 12px 23px
                     .card-head
                         p.hour
                         p.discipline
                         .arrow
+                            display: none
                             &.opened
                     .card-memberships
+                        height: auto
+                        opacity: 1
+                        text-align: right
+                        padding-right: 0
+                        margin-top: 0
                         p.membership
                             &.active
                         &.show
 
-@media (min-width: 1300px)
+@media (min-width: 1400px)
     .schedules
-        padding: 34px 0 44px
+        padding: 40px 0 50px
         .explanation
             max-width: 1160px
             margin: 
