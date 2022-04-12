@@ -43,14 +43,22 @@ const TheApp = () => {
             })}
           </ul>
           <div className="badges">
-            <a href="/" target="_blank" rel="noreferrer">
+            <a
+              href="https://play.google.com/store/apps/details?id=purasangrecrossfit.app.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StaticImage
                 src="../images/badge-googleplay.png"
                 height={39}
                 alt="Descarga desde Play Store"
               />
             </a>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a
+              href="https://itunes.apple.com/us/app/pura-sangre-crossfit/id1447657358"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StaticImage
                 src="../images/badge-appstore.png"
                 height={39}

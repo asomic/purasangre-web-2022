@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 
 const Disciplines = () => {
   return (
-    <section className="disciplines">
+    <section className="disciplines" id="disciplines">
       <div className="disciplines-inner">
         <div className="disciplines-header">
           <img src={emblemIcon} alt="Emblema Pura Sangre CrossFit" />

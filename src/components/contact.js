@@ -14,7 +14,7 @@ const location = {
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="contactInner">
         <div className="map">
           <Map location={location} zoomLevel={15.2} />

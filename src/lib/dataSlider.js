@@ -18,7 +18,7 @@ const dataSlider = [
       title:
         "<span class=italic>Encuentra un</span> <span class=color-turquoiseBlue>Horario a tu medida</span>",
       button: {
-        text: "explora nuestros horarios",
+        text: "Explora nuestros horarios",
         link: "horarios",
       },
     },

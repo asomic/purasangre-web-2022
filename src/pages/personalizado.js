@@ -5,8 +5,10 @@ import Infocards from "../components/infoCards";
 import PageHeader from "../components/pageHeader";
 import Layout from "../parts/layout";
 
-import WhatsappIcon from "../images/icon-whatsapp.svg";
+// import WhatsappIcon from "../images/icon-whatsapp.svg";
 import Contact from "../components/contact";
+
+import WhatsappIcon from "../components/whatsappIcon";
 
 const PersonalizadoPage = () => {
   return (
@@ -53,7 +55,8 @@ const PersonalizadoPage = () => {
               </p>
             </div>
             <a href="/" className="button pink">
-              <img src={WhatsappIcon} />
+              {/* <img src={WhatsappIcon} /> */}
+              <WhatsappIcon />
               Contáctanos via Whatsapp &gt;
             </a>
           </div>

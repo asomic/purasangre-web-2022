@@ -41,14 +41,14 @@ const Header = () => {
             <Link to="/" activeClassName="active">
               Home
             </Link>
-            <a href="#">Pura sangre</a>
+            <Link to="/#disciplines">Pura Sangre</Link>
             <Link to="/planes" activeClassName="active">
               Planes
             </Link>
             <Link to="/horarios" activeClassName="active">
               Horarios
             </Link>
-            <a href="#">Contacto</a>
+            <Link to="/#contact">Contacto</Link>
           </div>
           <div className="menu-footer">
             <p>

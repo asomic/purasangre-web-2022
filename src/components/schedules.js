@@ -97,6 +97,7 @@ const Schedules = () => {
             <div className="days" key={index}>
               <div className="head">
                 <h5>{days.forDays}</h5>
+                <p>Planes disponibles por horario</p>
               </div>
               {days.schedules.map((schedule) => (
                 <div className="card" key={schedule.id}>
