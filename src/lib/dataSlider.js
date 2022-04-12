@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const dataSlider = [
   {
     id: uuidv4(),
-    img: "https://images.unsplash.com/photo-1421218108559-eb1ff78357f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80",
+    img: "./slider-back-1.webp",
     data: {
       pretitle: "Bienvenido a",
       title:
@@ -12,7 +12,7 @@ const dataSlider = [
   },
   {
     id: uuidv4(),
-    img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+    img: "./slider-back-2.webp",
     data: {
       // pretitle: "Bienvenido a",
       title:

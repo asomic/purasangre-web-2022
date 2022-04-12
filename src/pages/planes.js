@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../parts/layout";
 import PageHeader from "../components/pageHeader";
 import Memberships from "../components/memberships";
+import Contact from "../components/contact";
 
 const PlanesPage = () => {
   return (
@@ -13,6 +14,7 @@ const PlanesPage = () => {
         image="/backpage-planes.jpg"
       />
       <Memberships title="Todos nuestros planes" />
+      <Contact />
     </Layout>
   );
 };

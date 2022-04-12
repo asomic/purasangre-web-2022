@@ -29,6 +29,7 @@
       flex-direction: column
       h1
         text-transform: uppercase
+        line-height: 110%
       h4
         text-transform: uppercase
         font-weight: 400
@@ -48,9 +49,40 @@
       .info
         width: 80%
         h1
+          font-size: 36px
         h4
+          font-size: 24px
         .button
           margin-top: 16px
+      &::before
+
+@media (min-width: 920px)
+  .swiper
+    .swiper-slide
+      .info
+        width: 60%
+        padding: 
+          top: 50px
+        h1
+          font-size: 40px
+        h4
+          font-size: 26px
+        .button
+          // margin-top: 16px
+      &::before
+
+@media (min-width: 1200px)
+  .swiper
+    height: 94vh
+    .swiper-slide
+      .info
+        width: 50%
+        h1
+          font-size: 44px
+        h4
+          font-size: 28px
+        .button
+          // margin-top: 16px
       &::before
 
 

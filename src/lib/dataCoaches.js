@@ -41,6 +41,13 @@ const dataCoaches = [
     ],
     image: "coach-joaquin.jpg",
   },
+  {
+    name: "Pedro ...",
+    title: "Coach",
+    grades: "...",
+    certifications: ["..."],
+    image: "coach-coto.jpg",
+  },
 ];
 
 export default dataCoaches;

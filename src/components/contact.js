@@ -1,14 +1,24 @@
 import React from "react";
+import Map from "./Map";
 
 import "../styles/contact.sass";
 
-import WhatsappIcon from "../images/icon-whatsapp.svg";
+import WhatsappIcon from "./whatsappIcon";
+
+const location = {
+  address:
+    "Longitudinal Sur, Km 189 Caletera Oriente, Cruce Zapallar Curicó, Maule",
+  lat: -34.9842245,
+  lng: -71.2184862,
+};
 
 const Contact = () => {
   return (
     <section className="contact">
       <div className="contactInner">
-        <div className="map"></div>
+        <div className="map">
+          <Map location={location} zoomLevel={15.2} />
+        </div>
         <div className="data">
           <h1 className="color-turquoiseBlue">Entrena con nosotros</h1>
           <p>
@@ -30,7 +40,8 @@ const Contact = () => {
             8:30 a 13:00 hrs
           </p>
           <a href="" className="button pink" target="_blank" rel="noreferrer">
-            <img src={WhatsappIcon} />
+            {/* <img src={WhatsappIcon} /> */}
+            <WhatsappIcon />
             Contáctanos via Whatsapp &gt;
           </a>
         </div>

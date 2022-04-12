@@ -5,69 +5,79 @@
         h1
             margin-bottom: 24px
     .coaches-content // .swiper & .swiper-wrapper
-        // height: auto
+        // heighpt: auto
         // height: 70vh
         height: 570px
         .swiper-wrapper
             .coach // .swiper-slide
-                // max-width: 83vw
-                max-width: 82vw
-                box-sizing: border-box
-                margin: 
-                    left: 9vw
-                    right: 9vw
-                padding: 34px 26px 38px
-                box-sizing: border-box
-                border-radius: 10px
-                background-color: rgb(36, 36, 36)
-                background-position: center
-                background-size: cover
-                background-repeat: no-repeat
                 position: relative
-                right: 0
-                transition: all ease 0.3s
-                .coach-header
-                    margin-bottom: 22px
-                    z-index: 2
+                padding: 0 9vw
+                box-sizing: border-box
+                .coach-inner
+                    width: 100%
+                    height: 100%
+                    box-sizing: border-box
+                    padding: 34px 26px 38px
+                    box-sizing: border-box
+                    border-radius: 10px
+                    background-color: rgb(36, 36, 36)
+                    background-position: center
+                    background-size: cover
+                    background-repeat: no-repeat
                     position: relative
-                    opacity: 1
-                    .pretitle //p
-                        letter-spacing: -0.02em
-                        text-transform: uppercase
-                    h2
-                        max-width: 60%
-                .coach-content
+                    transition: all ease 0.3s
                     z-index: 2
-                    position: relative
-                    opacity: 1
-                    .item
-                        margin-bottom: 16px
-                        .title //p
-                            font-weight: 700
+                    .coach-header
+                        margin-bottom: 22px
+                        z-index: 2
+                        position: relative
+                        opacity: 1
+                        .pretitle //p
+                            letter-spacing: -0.02em
                             text-transform: uppercase
-                            margin-bottom: 2px
-                            opacity: 1
-                        p
-                            opacity: 0.9
-                            line-height: 135%
-                        ul
-                            list-style-type: "> "
-                            li
-                                line-height: 135%
-                                margin-left: 0.8em
+                        h2
+                            max-width: 60%
+                    .coach-content
+                        z-index: 2
+                        position: relative
+                        opacity: 1
+                        .item
+                            margin-bottom: 16px
+                            .title //p
+                                font-weight: 700
+                                text-transform: uppercase
+                                margin-bottom: 2px
+                                opacity: 1
+                            p
                                 opacity: 0.9
-                                margin-bottom: 1px
-                        &:last-child
-                            margin-bottom: 0
-                &::before
-                    top: 0
-                    left: 0
-                    z-index: 1
-                    background-color: rgba(36, 36, 36, 0.9)
+                                line-height: 135%
+                            ul
+                                list-style-type: "> "
+                                li
+                                    line-height: 135%
+                                    margin-left: 0.8em
+                                    opacity: 0.9
+                                    margin-bottom: 1px
+                            &:last-child
+                                margin-bottom: 0
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        margin: auto
+                        z-index: 1
+                        width: 100%
+                        height: 100%
+                        background-color: rgba(36, 36, 36, 0.9)
                 &.swiper-slide-next
-                    margin-left: -5vw
+                    margin-left: -19vw
+                    opacity: 0.6
                 &.swiper-slide-prev
-                    right: -14vw
+                    right: -19vw
+                    opacity: 0.6
                 &:hover
                     .coach-header,
                     .coach-content
@@ -75,29 +85,151 @@
 
 @media (min-width: 768px)
     .coaches
+        padding: 50px 0 60px
         .coaches-header
             h1
         .coaches-content // .swiper & .swiper-wrapper
             .swiper-wrapper
+                padding: 0
                 .coach // .swiper-slide
-                    max-width: 30vw
-                    margin: 
-                        left: 3.33vw
-                    .coach-header
-                        .pretitle //p
-                        h2
-                    .coach-content
-                        .item
-                            .title //p
-                            p
-                            ul
-                                li
-                            &:last-child
-                    &::before
+                    padding: 0 0vw
+                    .coach-inner
+                        max-width: inherit
+                        margin: 
+                            left: inherit
+                            right: inherit
+                        right: inherit
+                        .coach-header
+                            .pretitle //p
+                            h2
+                        .coach-content
+                            .item
+                                .title //p
+                                p
+                                ul
+                                    li
+                                &:last-child
+                        &::before
                     &.swiper-slide-next
-                        margin-right: 0
+                        margin-left: 0
+                    &.swiper-slide-prev
+                        // right: auto
+                        right: -3vw
+                        opacity: 0.6
+                    &.swiper-slide-active
+                        padding-left: 6vw
+                    &.swiper-slide-next
+                        opacity: 1
+                        padding-right: 6vw
+                        &+.coach
+                            margin-left: -3vw
+                            opacity: 0.6
+                    &:hover
+                        .coach-header,
+                        .coach-content
+                        &::before
+                            display: none
+
+@media (min-width: 920px)
+    .coaches
+        // padding: 50px 0 60px
+        .coaches-header
+            h1
+        .coaches-content // .swiper & .swiper-wrapper
+            padding: 0 6vw
+            .swiper-wrapper
+                .coach // .swiper-slide
+                    transition: all ease-in-out 0.3s
+                    .coach-inner
+                        .coach-header
+                            .pretitle //p
+                            h2
+                        .coach-content
+                            .item
+                                .title //p
+                                p
+                                ul
+                                    li
+                                &:last-child
+                        &::before
+                    &.swiper-slide-next
+                        // margin-left: 0
                     &.swiper-slide-prev
                         right: 0
+                        // opacity: 1
+                    &.swiper-slide-active
+                        padding-left: 0
+                    &.swiper-slide-next
+                        padding-right: 0
+                        &+.coach
+                            padding-right: 0
+                            margin-left: 0
+                            opacity: 1
+                            &+.coach
+                                opacity: 0.6
+                    &:hover
+                        .coach-header,
+                        .coach-content
+                        &::before
+
+@media (min-width: 1200px)
+    .coaches
+        // padding: 50px 0 60px
+        .coaches-header
+            h1
+        .coaches-content // .swiper & .swiper-wrapper
+            padding: 0 8vw
+            .swiper-wrapper
+                .coach // .swiper-slide
+                    .coach-inner
+                        .coach-header
+                            .pretitle //p
+                            h2
+                        .coach-content
+                            .item
+                                .title //p
+                                p
+                                ul
+                                    li
+                                &:last-child
+                        &::before
+                    &.swiper-slide-next
+                    &.swiper-slide-prev
+                        // opacity: 1
+                    &.swiper-slide-active
+                    &.swiper-slide-next
+                        &+.coach
+                    &:hover
+                        .coach-header,
+                        .coach-content
+                        &::before
+
+@media (min-width: 1400px)
+    .coaches
+        // padding: 50px 0 60px
+        .coaches-header
+            h1
+        .coaches-content // .swiper & .swiper-wrapper
+            padding: 0 9.4vw
+            .swiper-wrapper
+                .coach // .swiper-slide
+                    .coach-inner
+                        .coach-header
+                            .pretitle //p
+                            h2
+                        .coach-content
+                            .item
+                                .title //p
+                                p
+                                ul
+                                    li
+                                &:last-child
+                        &::before
+                    &.swiper-slide-next
+                    &.swiper-slide-prev
+                    &.swiper-slide-active
+                    &.swiper-slide-next
+                        &+.coach
                     &:hover
                         .coach-header,
                         .coach-content

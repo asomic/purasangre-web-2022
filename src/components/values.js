@@ -50,8 +50,8 @@ const Values = () => {
             >
               <h3>Sin egos</h3>
               <p>
-                Compite contigo mismo, potencia tus capacidades y los resultados
-                llegaran.
+                En Pura Sangre compitirás contigo mismo, mejorando tus
+                capacidades y los resultados llegarán por si solos.
               </p>
             </div>
             <div
@@ -59,14 +59,20 @@ const Values = () => {
               style={{ backgroundImage: "url(/back-value2.jpg)" }}
             >
               <h3>Compañerismo</h3>
-              <p>El ambiente que se respira a diario en nuestro box.</p>
+              <p>
+                Intégrate a una gran familia que te ayudará a cambiar tu vida y
+                superar metas que creías imposibles.
+              </p>
             </div>
             <div
               className="value"
               style={{ backgroundImage: "url(/back-value3.jpg)" }}
             >
               <h3>Pasarlo bien</h3>
-              <p>Somos diferentes a otros gimnasios, cada día es distinto.</p>
+              <p>
+                Celebramos aniversarios, halloween, competencias, entre otras
+                actividades para compartir y pasarlo bien.
+              </p>
             </div>
           </div>
         </div>
