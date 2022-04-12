@@ -10,9 +10,12 @@ import Values from "../components/values";
 import TheApp from "../components/theApp";
 import Contact from "../components/contact";
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
-    <Layout pageTitle="La comunidad fitness más grande de la VII región">
+    <Layout
+      pageTitle="La comunidad fitness más grande de la VII región"
+      pathname={location.pathname}
+    >
       <Slider />
       <Disciplines />
       <Memberships summarized={true} title="Planes" moreLink={true} />

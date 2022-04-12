@@ -1,16 +1,21 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
+
 import Footer from "./footer";
 import Header from "./header";
 import "../styles/globals.sass";
 import FixBar from "../components/fixBar";
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageTitle, children, pathname }) => {
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{pageTitle} — Pura Sangre CrossFit</title>
+        {pathname === "/" ? (
+          <title>Pura Sangre CrossFit</title>
+        ) : (
+          <title>{pageTitle} — Pura Sangre CrossFit</title>
+        )}
         {/* <link rel="canonical" href="http://purasangrecrossfit.cl" /> */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

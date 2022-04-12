@@ -10,9 +10,9 @@ import Contact from "../components/contact";
 
 import WhatsappIcon from "../components/whatsappIcon";
 
-const PersonalizadoPage = () => {
+const PersonalizadoPage = ({ location }) => {
   return (
-    <Layout pageTitle="Personalizado">
+    <Layout pageTitle="Personalizado" pathname={location.pathname}>
       <PageHeader
         title="Personalizado"
         desc="Entrena CrossFit al ritmo que quieras"

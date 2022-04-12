@@ -6,9 +6,9 @@ import Infocards from "../components/infoCards";
 import PageHeader from "../components/pageHeader";
 import Layout from "../parts/layout";
 
-const NutricionPage = () => {
+const NutricionPage = ({ location }) => {
   return (
-    <Layout pageTitle="Nutrición">
+    <Layout pageTitle="Nutrición" pathname={location.pathname}>
       <PageHeader
         title="Nutrición"
         desc="Complementa tus entrenamientos con una alimentación adecuada"

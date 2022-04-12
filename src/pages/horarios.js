@@ -4,9 +4,9 @@ import PageHeader from "../components/pageHeader";
 import Schedules from "../components/schedules";
 import Contact from "../components/contact";
 
-const HorariosPage = () => {
+const HorariosPage = ({ location }) => {
   return (
-    <Layout pageTitle="Horarios">
+    <Layout pageTitle="Horarios" pathname={location.pathname}>
       <PageHeader
         title="Horarios"
         desc="Siempre hay un lugar para ti durante el día"

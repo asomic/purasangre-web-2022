@@ -6,9 +6,9 @@ import Infocardimage from "../components/InfoCardImage";
 import Infocarddata from "../components/InfoCardData";
 import Contact from "../components/contact";
 
-const CrossfitPage = () => {
+const CrossfitPage = ({ location }) => {
   return (
-    <Layout pageTitle="CrossFit">
+    <Layout pageTitle="CrossFit" pathname={location.pathname}>
       <PageHeader
         title="CrossFit"
         desc="El core de Pura Sangre"

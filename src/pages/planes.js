@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../parts/layout";
 import PageHeader from "../components/pageHeader";
 import Memberships from "../components/memberships";
 import Contact from "../components/contact";
 
-const PlanesPage = () => {
+const PlanesPage = ({ location }) => {
   return (
-    <Layout pageTitle="Planes">
+    <Layout pageTitle="Planes" pathname={location.pathname}>
       <PageHeader
         title="Planes"
         desc="Planes para ser un Purasangre"
