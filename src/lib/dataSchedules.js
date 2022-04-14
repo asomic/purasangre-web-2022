@@ -14,6 +14,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "08:00",
@@ -26,6 +27,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "09:00",
@@ -38,6 +40,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "10:00",
@@ -50,6 +53,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "11:00",
@@ -62,6 +66,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "12:00",
@@ -74,6 +79,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "13:15",
@@ -86,6 +92,7 @@ const dataSchedules = [
           lunch: true,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "15:00",
@@ -98,6 +105,7 @@ const dataSchedules = [
           lunch: true,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "16:00",
@@ -110,6 +118,7 @@ const dataSchedules = [
           lunch: true,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "17:00",
@@ -122,6 +131,7 @@ const dataSchedules = [
           lunch: true,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "18:00",
@@ -134,6 +144,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "19:00",
@@ -146,6 +157,7 @@ const dataSchedules = [
           lunch: false,
           est: false,
         },
+        span: 1,
       },
       {
         hour: "20:00",
@@ -158,6 +170,7 @@ const dataSchedules = [
           lunch: false,
           est: false,
         },
+        span: 1,
       },
       {
         hour: "21:00",
@@ -170,6 +183,7 @@ const dataSchedules = [
           lunch: false,
           est: false,
         },
+        span: 1,
       },
     ],
   },
@@ -177,6 +191,20 @@ const dataSchedules = [
     forDays: "Sábados",
     priority: 2,
     schedules: [
+      {
+        noContent: true,
+        hour: "",
+        discipline: "",
+        memberships: {
+          full: false,
+          doce: false,
+          ocho: false,
+          am: false,
+          lunch: false,
+          est: false,
+        },
+        span: 1,
+      },
       {
         hour: "08:30",
         discipline: "Barbell Club",
@@ -188,6 +216,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 2,
       },
       {
         hour: "10:00",
@@ -200,6 +229,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "11:00",
@@ -212,6 +242,7 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
       },
       {
         hour: "12:00",
@@ -224,6 +255,21 @@ const dataSchedules = [
           lunch: false,
           est: true,
         },
+        span: 1,
+      },
+      {
+        noContent: true,
+        hour: "",
+        discipline: "",
+        memberships: {
+          full: false,
+          doce: false,
+          ocho: false,
+          am: false,
+          lunch: false,
+          est: false,
+        },
+        span: 8,
       },
     ],
   },
