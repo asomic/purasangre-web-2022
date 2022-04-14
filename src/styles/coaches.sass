@@ -25,7 +25,8 @@
                     background-size: cover
                     background-repeat: no-repeat
                     position: relative
-                    transition: all ease 0.3s
+                    transition: all ease-in-out 0.3s
+                    opacity: 1
                     z-index: 2
                     .coach-header
                         margin-bottom: 22px
@@ -72,6 +73,7 @@
                         width: 100%
                         height: 100%
                         background-color: rgba(36, 36, 36, 0.9)
+                        transition: all ease-in-out 0.3s
                 &.swiper-slide-next
                     margin-left: -19vw
                     opacity: 0.6
@@ -127,8 +129,12 @@
                     &:hover
                         .coach-header,
                         .coach-content
-                        &::before
-                            display: none
+                        .coach-inner
+                            .coach-header,
+                            .coach-content
+                                opacity: 0
+                            &::before
+                                opacity: 0
 
 @media (min-width: 920px)
     .coaches
@@ -212,7 +218,69 @@
         .coaches-header
             h1
         .coaches-content // .swiper & .swiper-wrapper
-            padding: 0 9.4vw
+            padding: 0 9.45vw
+            .swiper-wrapper
+                .coach // .swiper-slide
+                    .coach-inner
+                        .coach-header
+                            .pretitle //p
+                            h2
+                        .coach-content
+                            .item
+                                .title //p
+                                p
+                                ul
+                                    li
+                                &:last-child
+                        &::before
+                    &.swiper-slide-next
+                    &.swiper-slide-prev
+                    &.swiper-slide-active
+                    &.swiper-slide-next
+                        &+.coach
+                    &:hover
+                        .coach-header,
+                        .coach-content
+                        &::before
+
+@media (min-width: 1600px)
+    .coaches
+        // padding: 50px 0 60px
+        .coaches-header
+            h1
+        .coaches-content // .swiper & .swiper-wrapper
+            padding: 0 15vw
+            .swiper-wrapper
+                .coach // .swiper-slide
+                    .coach-inner
+                        .coach-header
+                            .pretitle //p
+                            h2
+                        .coach-content
+                            .item
+                                .title //p
+                                p
+                                ul
+                                    li
+                                &:last-child
+                        &::before
+                    &.swiper-slide-next
+                    &.swiper-slide-prev
+                    &.swiper-slide-active
+                    &.swiper-slide-next
+                        &+.coach
+                    &:hover
+                        .coach-header,
+                        .coach-content
+                        &::before
+
+@media (min-width: 1900px)
+    .coaches
+        // padding: 50px 0 60px
+        .coaches-header
+            h1
+        .coaches-content // .swiper & .swiper-wrapper
+            padding: 0 19.5vw
             .swiper-wrapper
                 .coach // .swiper-slide
                     .coach-inner
