@@ -12,10 +12,7 @@ import Contact from "../components/contact";
 
 const IndexPage = ({ location }) => {
   return (
-    <Layout
-      pageTitle="La comunidad fitness más grande de la VII región"
-      pathname={location.pathname}
-    >
+    <Layout pathname={location.pathname}>
       <Slider />
       <Disciplines />
       <Memberships summarized={true} title="Planes" moreLink={true} />

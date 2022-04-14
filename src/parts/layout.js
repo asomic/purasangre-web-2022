@@ -12,7 +12,10 @@ const Layout = ({ pageTitle, children, pathname }) => {
       <Helmet>
         <meta charSet="utf-8" />
         {pathname === "/" ? (
-          <title>Pura Sangre CrossFit</title>
+          <title>
+            Pura Sangre CrossFit — La comunidad fitness más grande de la VII
+            región
+          </title>
         ) : (
           <title>{pageTitle} — Pura Sangre CrossFit</title>
         )}
