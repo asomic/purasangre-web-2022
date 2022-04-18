@@ -28,9 +28,11 @@ const PersonalizadoPage = ({ location }) => {
             <p>
               El entrenamiento personalizado está enfocado en lograr tus
               objetivos con una planificación hecha exclusivamente para ti por
-              profesionales del CrossFit. El coach estará siempre a tu lado, te
-              irá enseñando, corrigiendo y motivando 1 a 1, para lograr tu mejor
-              versión
+              profesionales del CrossFit.
+            </p>
+            <p>
+              El coach estará siempre a tu lado, te irá enseñando, corrigiendo y
+              motivando 1 a 1, para lograr tu mejor versión
             </p>
           </div>
         </Infocarddata>
@@ -54,7 +56,12 @@ const PersonalizadoPage = ({ location }) => {
                 <span>/mes (5 veces por semana)</span>
               </p>
             </div>
-            <a href="/" className="button pink">
+            <a
+              href="https://wa.me/56940207699?text=Hola,%20quiero%20solicitar%20el%20plan%20personalizado"
+              className="button pink"
+              target="_blank"
+              rel="noreferrer"
+            >
               {/* <img src={WhatsappIcon} /> */}
               <WhatsappIcon />
               Contáctanos via Whatsapp &gt;

@@ -41,14 +41,18 @@ const Header = () => {
             <Link to="/" activeClassName="active">
               Home
             </Link>
-            <Link to="/#disciplines">Pura Sangre</Link>
+            <Link to="/#disciplines" onClick={menuTrigger}>
+              Pura Sangre
+            </Link>
             <Link to="/planes" activeClassName="active">
               Planes
             </Link>
             <Link to="/horarios" activeClassName="active">
               Horarios
             </Link>
-            <Link to="/#contact">Contacto</Link>
+            <Link to="/#contact" onClick={menuTrigger}>
+              Contacto
+            </Link>
           </div>
           <div className="menu-footer">
             <p>

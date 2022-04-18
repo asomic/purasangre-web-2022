@@ -12,5 +12,15 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Pura Sangre CrossFit",
+        short_name: "Pura Sangre",
+        background_color: "#ED0386",
+        theme_color: "#ED0386",
+        icon: "src/images/favicon.png",
+      },
+    },
   ],
 };

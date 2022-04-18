@@ -1,5 +1,6 @@
 .coaches
     padding: 48px 0
+    position: relative
     .coaches-header
         text-align: center
         h1
@@ -79,11 +80,15 @@
                     opacity: 0.6
                 &.swiper-slide-prev
                     right: -19vw
-                    opacity: 0.6
                 &:hover
                     .coach-header,
                     .coach-content
                     &::before
+    .prev-arrow,
+    .next-arrow
+        display: none
+        img
+            width: 30px
 
 @media (min-width: 768px)
     .coaches
@@ -115,9 +120,7 @@
                     &.swiper-slide-next
                         margin-left: 0
                     &.swiper-slide-prev
-                        // right: auto
                         right: -3vw
-                        opacity: 0.6
                     &.swiper-slide-active
                         padding-left: 6vw
                     &.swiper-slide-next
@@ -140,9 +143,13 @@
     .coaches
         padding: 58px 0 66px
         .coaches-header
+            position: relative
+            z-index: 1
             h1
                 margin-bottom: 30px
         .coaches-content // .swiper & .swiper-wrapper
+            position: relative
+            z-index: 1
             padding: 0 6vw
             .swiper-wrapper
                 .coach // .swiper-slide
@@ -163,7 +170,7 @@
                         // margin-left: 0
                     &.swiper-slide-prev
                         right: 0
-                        // opacity: 1
+                        opacity: 0.6
                     &.swiper-slide-active
                         padding-left: 0
                     &.swiper-slide-next
@@ -178,6 +185,30 @@
                         .coach-header,
                         .coach-content
                         &::before
+        .prev-arrow
+            position: absolute
+            top: 10%
+            bottom: 0
+            margin: auto
+            text-align: center
+            left: 0
+            z-index: 2
+            display: flex
+            justify-content: space-between
+            padding-left: 1.2vw
+            cursor: pointer
+        .next-arrow
+            position: absolute
+            top: 10%
+            bottom: 0
+            margin: auto
+            text-align: center
+            right: 0
+            z-index: 2
+            display: flex
+            justify-content: space-between
+            padding-right: 1.2vw
+            cursor: pointer
 
 @media (min-width: 1200px)
     .coaches
@@ -211,6 +242,10 @@
                         .coach-header,
                         .coach-content
                         &::before
+        .prev-arrow
+            padding-left: 3vw
+        .next-arrow
+            padding-right: 3vw
 
 @media (min-width: 1400px)
     .coaches
@@ -242,6 +277,10 @@
                         .coach-header,
                         .coach-content
                         &::before
+        .prev-arrow
+            padding-left: 4.5vw
+        .next-arrow
+            padding-right: 4.5vw
 
 @media (min-width: 1600px)
     .coaches
@@ -273,6 +312,11 @@
                         .coach-header,
                         .coach-content
                         &::before
+        .prev-arrow
+            padding-left: 7vw
+        .next-arrow
+            padding-right: 7vw
+
 
 @media (min-width: 1900px)
     .coaches
@@ -304,3 +348,7 @@
                         .coach-header,
                         .coach-content
                         &::before
+        .prev-arrow
+            padding-left: 9.5vw
+        .next-arrow
+            padding-right: 9.5vw

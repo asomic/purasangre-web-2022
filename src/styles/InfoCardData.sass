@@ -14,33 +14,52 @@
         p
             font-size: 16px
             line-height: 130%
-            margin-bottom: 12px
+            margin-bottom: 18px
             &:last-child
                 margin-bottom: 0
         .price
-            margin-top: 28px
-            margin-bottom: 25px
+            margin-top: 15px
             p
                 font-size: 24px
                 letter-spacing: -0.04em
                 line-height: 110%
                 font-weight: 600
+                display: flex
                 span
                     font-size: 16px
                     font-weight: 400
                     letter-spacing: 0
                     margin-left: 5px
+        a
+            margin-top: 23px
+        ul
+            margin-top: -2px
+            list-style-type: '> '
+            margin-left: 12px
+            margin-bottom: 28px
+            li
+                margin-bottom: 8px
+                line-height: 120%
 
             
 @media (min-width: 768px)
     .info-card-data
-        padding: 32px 30px 34px
+        padding: 32px 40px 38px
         &:nth-child(2)
             order: -1
             
+@media (min-width: 920px)
+    .info-card-data
+        // padding: 32px 30px 34px
+        .info-card-data-header
+            margin-bottom: 20px
+        &:nth-child(2)
+            // order: -1
+            
 @media (min-width: 1200px)
     .info-card-data
-        padding: 36px 52px 40px 38px
+        padding: 40px 70px 44px 38px
+        .info-card-data-body
         &:nth-child(2)
             // order: -1
             

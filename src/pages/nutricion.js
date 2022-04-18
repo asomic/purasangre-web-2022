@@ -31,7 +31,7 @@ const NutricionPage = ({ location }) => {
         <Infocardimage image="" />
         <Infocarddata>
           <div className="info-card-data-header">
-            <h1>Nuestros Servicio Nutricional</h1>
+            <h1>Nuestro Servicio Nutricional</h1>
             <p className="subtitle">Consta de</p>
           </div>
           <div className="info-card-data-body">
@@ -54,7 +54,7 @@ const NutricionPage = ({ location }) => {
             <div className="price">
               <p>
                 $65.000
-                <span>plan trimestral</span>
+                <span>/plan trimestral</span>
               </p>
             </div>
           </div>

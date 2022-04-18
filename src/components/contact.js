@@ -39,7 +39,12 @@ const Contact = () => {
             <span className="bold">Sábados</span> <br />
             8:30 a 13:00 hrs
           </p>
-          <a href="" className="button pink" target="_blank" rel="noreferrer">
+          <a
+            href="https://wa.me/56940207699?text=Hola"
+            className="button pink"
+            target="_blank"
+            rel="noreferrer"
+          >
             {/* <img src={WhatsappIcon} /> */}
             <WhatsappIcon />
             Contáctanos via Whatsapp &gt;

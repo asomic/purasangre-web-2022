@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useRef, useCallback } from "react";
+// import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import dataCoaches from "../lib/dataCoaches";
 
+import "swiper/css/navigation";
 import "../styles/coaches.sass";
 
+import ArrowLeft from "../images/arrow-left.svg";
+import ArrowRight from "../images/arrow-right.svg";
+
 const Coaches = () => {
+  const sliderRef = useRef(null);
+
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+
   return (
     <section className="coaches">
       <div className="coaches-header">
@@ -15,12 +32,15 @@ const Coaches = () => {
         className="coaches-content"
         slidesPerView={1}
         spaceBetween={20}
+        ref={sliderRef}
         breakpoints={{
           768: {
             slidesPerView: 2,
+            spaceBetween: 20,
           },
           920: {
             slidesPerView: 3,
+            spaceBetween: 20,
           },
         }}
       >
@@ -54,6 +74,12 @@ const Coaches = () => {
           );
         })}
       </Swiper>
+      <div className={`prev-arrow `} onClick={handlePrev}>
+        <img src={ArrowLeft} alt="Mover a la izquierda" />
+      </div>
+      <div className={`next-arrow`} onClick={handleNext}>
+        <img src={ArrowRight} alt="Mover a la derecha" />
+      </div>
     </section>
   );
 };

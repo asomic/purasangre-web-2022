@@ -3,6 +3,13 @@ import React from "react";
 import "../styles/MembershipCard.sass";
 
 const MembershipCard = ({ memberships, summarized }) => {
+  const currency = function (number) {
+    return new Intl.NumberFormat("es-CL", {
+      style: "currency",
+      currency: "CLP",
+    }).format(number);
+  };
+
   return (
     <div className={`membership-card ${memberships.summarized && "mDisplay"}`}>
       <div className="membership-card-header">
@@ -22,7 +29,7 @@ const MembershipCard = ({ memberships, summarized }) => {
             .map((period, i) => (
               <div className="membership-card-footer" key={i}>
                 <div className="price">
-                  <h4>&#36;{period.price}</h4>{" "}
+                  <h4>{currency(period.price)}</h4>{" "}
                   <span>
                     /{period.name === "Mensual" ? "mes" : period.name}
                   </span>
@@ -42,7 +49,7 @@ const MembershipCard = ({ memberships, summarized }) => {
         : memberships.periods.result.map((period, i) => (
             <div className="membership-card-footer" key={i}>
               <div className="price">
-                <h4>&#36;{period.price}</h4>{" "}
+                <h4>{currency(period.price)}</h4>{" "}
                 <span>
                   /
                   {period.name === "Mensual"
