@@ -46,7 +46,7 @@ const Values = () => {
           <div className="values-items">
             <div
               className="value"
-              style={{ backgroundImage: "url(/back-value1.jpg)" }}
+              style={{ backgroundImage: "url(/back-value1.webp)" }}
             >
               <h3>Sin egos</h3>
               <p>
@@ -56,7 +56,7 @@ const Values = () => {
             </div>
             <div
               className="value"
-              style={{ backgroundImage: "url(/back-value2.jpg)" }}
+              style={{ backgroundImage: "url(/back-value2.webp)" }}
             >
               <h3>Compañerismo</h3>
               <p>
@@ -66,7 +66,7 @@ const Values = () => {
             </div>
             <div
               className="value"
-              style={{ backgroundImage: "url(/back-value3.jpg)" }}
+              style={{ backgroundImage: "url(/back-value3.webp)" }}
             >
               <h3>Pasarlo bien</h3>
               <p>

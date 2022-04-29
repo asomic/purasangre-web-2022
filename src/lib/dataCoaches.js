@@ -42,10 +42,16 @@ const dataCoaches = [
     image: "coach-joaquin.jpg",
   },
   {
-    name: "Pedro ...",
+    name: "Pedro Torres",
     title: "Coach",
-    grades: "...",
-    certifications: ["..."],
+    grades: "Ingeniero en Mecatrónica, Universidad de Talca.",
+    certifications: [
+      "2º Lugar Scaled Wodstock 2017 (Winter Edition)",
+      "3º Lugar Rx Wodstock 2017 (Nacional)",
+      "5º Lugar Rx Wodstock 2018 (Nacional)",
+      "10º Elite Wodstock 2019 (Nacional)",
+      "9º Nacional Open CF Games 2021",
+    ],
     image: "coach-coto.jpg",
   },
 ];

@@ -15,10 +15,10 @@ const CrossfitPage = ({ location }) => {
         image="/backpage-crossfit.jpg"
       />
       <Infocards>
-        <Infocardimage image="/back-1.jpg" />
+        <Infocardimage image="/back-1.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
-            <h1>CrossFit</h1>
+            <h1 className="color-turquoiseBlue">CrossFit</h1>
             <p className="subtitle">¿Qué es?</p>
           </div>
           <div className="info-card-data-body">
@@ -28,18 +28,20 @@ const CrossfitPage = ({ location }) => {
               intensidad.
             </p>
             <p>
-              Se puede utilizar para lograr cualquier objetivo, desde mejorar la
-              salud hasta mejorar el rendimiento físico. Los entrenamientos
-              funcionan para todos, desde las personas que nunca han hecho
-              ejercicio y hasta los que han entrenado durante años, comparten
-              por igual los beneficios de CrossFit.
+              <span className="bold ">
+                Se puede utilizar para lograr cualquier objetivo
+              </span>
+              ; desde mejorar la salud hasta mejorar el rendimiento físico. Los
+              entrenamientos funcionan para todos, desde las personas que nunca
+              han hecho ejercicio y hasta los que han entrenado durante años,
+              comparten por igual los beneficios de CrossFit.
             </p>
           </div>
         </Infocarddata>
-        <Infocardimage image="/back-2.jpg" />
+        <Infocardimage image="/back-2.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
-            <h1>Clases guiadas</h1>
+            <h1 className="color-turquoiseBlue">Clases guiadas</h1>
             <p className="subtitle">Nunca estaras solo</p>
           </div>
           <div className="info-card-data-body">
@@ -50,8 +52,12 @@ const CrossfitPage = ({ location }) => {
             </p>
             <p>
               Todas las clases son guiadas. Los coaches te enseñarán la correcta
-              ejecución de los movimientos, los cuales pueden adaptarse a
-              personas de cualquier edad y nivel de condición física.
+              ejecución de los movimientos, los cuales{" "}
+              <span className="bold ">
+                pueden adaptarse a personas de cualquier edad y nivel de
+                condición física
+              </span>
+              .
             </p>
           </div>
         </Infocarddata>

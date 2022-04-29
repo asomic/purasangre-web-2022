@@ -50,9 +50,9 @@ const Header = () => {
             <Link to="/horarios" activeClassName="active">
               Horarios
             </Link>
-            <Link to="/#contact" onClick={menuTrigger}>
+            <a href="#contact" onClick={menuTrigger}>
               Contacto
-            </Link>
+            </a>
           </div>
           <div className="menu-footer">
             <p>
@@ -74,7 +74,11 @@ const Header = () => {
               <br />
               8:30 a 13:00 hrs
             </p>
-            <a className="button pink" target="_blank" rel="noreferrer">
+            <a
+              className="button pink"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <img src={WhatsappIcon} />
               Contáctanos via Whatsapp &gt;
             </a>

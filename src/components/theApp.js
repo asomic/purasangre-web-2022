@@ -30,7 +30,7 @@ const TheApp = () => {
           />
         </div>
         <div className="theAppInnerData">
-          <StaticImage src="../images/icon-app.png" alt="Pura Sangre app" />
+          <StaticImage src="../images/icon-app.webp" alt="Pura Sangre app" />
           <h2>Nuestra app</h2>
           <p>
             DISPONIBLE EN
@@ -66,10 +66,15 @@ const TheApp = () => {
               />
             </a>
           </div>
-          <div className="by">
+          <a
+            className="by"
+            target={`_blank`}
+            href="https://nfit.app/?ref=purasangre"
+            rel={`noopener noreferrer`}
+          >
             <p>powered by</p>
             <StaticImage src="../images/icon-nfit.png" alt="NFIT" width={25} />
-          </div>
+          </a>
         </div>
       </div>
     </section>

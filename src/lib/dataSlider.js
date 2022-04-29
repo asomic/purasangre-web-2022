@@ -16,27 +16,25 @@ const dataSlider = [
     data: {
       // pretitle: "Bienvenido a",
       title:
-        "<span class=italic>Encuentra un</span> <span class=color-turquoiseBlue>Horario a tu medida</span>",
+        "<span class=italic>Encuentra un</span> <span class=color-turquoiseBlue>Horario para ti</span>",
       button: {
         text: "Explora nuestros horarios",
         link: "horarios",
       },
     },
   },
-  // {
-  //   id: uuidv4(),
-  //   title: "Lorem ipsum",
-  //   subTitle: "Lorem",
-  //   img: "https://images.unsplash.com/photo-1416862291207-4ca732144d83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1767&q=80",
-  //   data: {
-  //     //   pretitle: "Pretitulo",
-  //     title: "Este es un titulo",
-  //     button: {
-  //       text: "Haz click",
-  //       link: "/planes",
-  //     },
-  //   },
-  // },
+  {
+    id: uuidv4(),
+    img: "./slider-back-3.webp",
+    data: {
+      pretitle: "Contrata aquí",
+      title: "Un plan <span class=color-turquoiseBlue>a tu medida</span>",
+      button: {
+        text: "Ver planes",
+        link: "planes",
+      },
+    },
+  },
   // {
   //   id: uuidv4(),
   //   title: "Lorem ipsum",

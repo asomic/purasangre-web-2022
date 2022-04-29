@@ -20,7 +20,7 @@ const Disciplines = () => {
           <Link
             to="/crossfit"
             className="discipline-card"
-            style={{ backgroundImage: "url(/back-crossfit.jpg)" }}
+            style={{ backgroundImage: "url(/back-crossfit.webp)" }}
           >
             <h2>CrossFit</h2>
             {/* <p>El core de Pura Sangre</p> */}
@@ -29,7 +29,7 @@ const Disciplines = () => {
           <Link
             to="/personalizado"
             className="discipline-card"
-            style={{ backgroundImage: "url(/back-personalizado.jpg)" }}
+            style={{ backgroundImage: "url(/back-personalizado.webp)" }}
           >
             <h2>Personalizado</h2>
             <p>Entrena CrossFit al ritmo que quieras</p>
@@ -37,7 +37,7 @@ const Disciplines = () => {
           <Link
             to="/nutricion"
             className="discipline-card"
-            style={{ backgroundImage: "url(/back-nutricion.jpg)" }}
+            style={{ backgroundImage: "url(/back-nutricion.webp)" }}
           >
             <h2>Nutrición</h2>
             <p>Complementa tus entrenamientos para lograr tus objetivos</p>

@@ -43,7 +43,7 @@ const Contact = () => {
             href="https://wa.me/56940207699?text=Hola"
             className="button pink"
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer noopener"
           >
             {/* <img src={WhatsappIcon} /> */}
             <WhatsappIcon />

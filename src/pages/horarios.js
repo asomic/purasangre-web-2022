@@ -10,7 +10,7 @@ const HorariosPage = ({ location }) => {
       <PageHeader
         title="Horarios"
         desc="Siempre hay un lugar para ti durante el día"
-        image="/backpage-horarios.jpg"
+        image="/backpage-horarios.webp"
       />
       <Schedules />
       <Contact />

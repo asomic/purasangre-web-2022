@@ -18,6 +18,7 @@ const Footer = () => {
           <div className="certified">
             <a
               href="http://journal.crossfit.com/start.tpl?version=CFJ-white123x63"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <img src={crossfitJournalIcon} />
@@ -26,11 +27,16 @@ const Footer = () => {
         </div>
         <div className="credits-wrapper">
           <div className="rrss">
-            <a href="https://www.instagram.com/purasangrecf/" target="_blank">
+            <a
+              href="https://www.instagram.com/purasangrecf/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <img src={instagramIcon} />
             </a>
             <a
               href="https://www.facebook.com/purasangrecrossfit/"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <img src={facebookIcon} />

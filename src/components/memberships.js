@@ -251,11 +251,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
               ))
           : membershipsData &&
             membershipsData.map((item, index) => (
-              <MembershipCard
-                memberships={item}
-                // summarized={summarized}
-                key={index}
-              />
+              <MembershipCard memberships={item} key={index} />
             ))}
       </div>
       {moreLink && (

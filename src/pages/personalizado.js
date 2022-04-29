@@ -19,16 +19,22 @@ const PersonalizadoPage = ({ location }) => {
         image="/backpage-personalizado.jpg"
       />
       <Infocards>
-        <Infocardimage image="/back-3.jpg" />
+        <Infocardimage image="/back-3.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
-            <h1>CrossFit a tu ritmo</h1>
+            <h1>
+              <span className="italic">CrossFit</span>{" "}
+              <span className="color-turquoiseBlue">a tu ritmo</span>
+            </h1>
           </div>
           <div className="info-card-data-body">
             <p>
               El entrenamiento personalizado está enfocado en lograr tus
-              objetivos con una planificación hecha exclusivamente para ti por
-              profesionales del CrossFit.
+              objetivos con una planificación{" "}
+              <span className="bold">
+                hecha exclusivamente para ti por profesionales del CrossFit
+              </span>
+              .
             </p>
             <p>
               El coach estará siempre a tu lado, te irá enseñando, corrigiendo y
@@ -36,11 +42,11 @@ const PersonalizadoPage = ({ location }) => {
             </p>
           </div>
         </Infocarddata>
-        <Infocardimage image="/back-4.jpg" />
+        <Infocardimage image="/back-4.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <p className="pretitle">Plan</p>
-            <h1 className="italic">personalizado</h1>
+            <h1 className="italic color-turquoiseBlue">personalizado</h1>
           </div>
           <div className="info-card-data-body">
             <p>Horario a convenir con el coach</p>
