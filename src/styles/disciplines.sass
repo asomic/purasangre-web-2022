@@ -32,7 +32,8 @@
                 flex-direction: column
                 background-color: black
                 background-position: center
-                background-size: cover
+                // background-size: cover
+                background-size: 100%
                 background-repeat: no-repeat
                 border-radius: 10px
                 margin-bottom: 18px
@@ -40,6 +41,7 @@
                 padding: 0 28px
                 color: white
                 position: relative
+                transition: all ease 0.5s
                 h2
                     margin-bottom: 6px
                     position: relative
@@ -63,6 +65,8 @@
                     height: 100%
                     z-index: 1
                     background-color: rgba(black, 0.5)
+                &:is(:hover, :focus)
+                    background-size: 102%
             .discipline-card-special
                 text-align: center
                 display: flex

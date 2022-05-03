@@ -75,8 +75,12 @@
             .badges
                 margin-bottom: 20px
                 a
+                    opacity: 1
+                    transition: all ease-in-out 0.3s
                     &:first-child                    
-                        margin-right: 7px 
+                        margin-right: 7px
+                    &:is(:hover, :focus)
+                        opacity: 0.8
                 img
             .by
                 display: flex

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/MembershipCard.sass";
+import "../styles/membershipCard.sass";
 
 const MembershipCard = ({ memberships, summarized }) => {
   const currency = function (number) {
@@ -47,7 +47,7 @@ const MembershipCard = ({ memberships, summarized }) => {
               </div>
             ))
         : memberships.periods.result.map((period, i) => (
-            <div className="membership-card-footer" key={i}>
+            <div className="membership-card-footer notSummarized" key={i}>
               <div className="price">
                 <h4>{currency(period.price)}</h4>{" "}
                 <span>
