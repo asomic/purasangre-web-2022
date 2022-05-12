@@ -26,7 +26,11 @@ const FixBar = () => {
   return (
     <>
       <div className={`fix-bar ${barState ? "" : "closed"}`}>
-        <a>
+        <a
+          href="https://wa.me/56940207699?text=Hola,%20quiero%20solicitar%20las%20tres%20clases%20gratis"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           Obten&nbsp;<span className="bold">3 clases gratis</span>{" "}
           <span className="bold whatsappLink">
             <img src={whatsAppWhiteIcon} /> SOLICITA POR WHATSAPP

@@ -15,6 +15,7 @@
     .membership-card-info
         margin-bottom: 18px
         p
+            color: $lightGray
     .membership-card-footer
         display: flex
         justify-content: space-between
@@ -45,6 +46,24 @@
             .price
                 h4
                     span
+        &.mDisplay
+            &:nth-child(n+4)
+
+@media (min-width: 1280px)
+    .membership-card
+        padding: 28px 30px 20px
+        .membership-card-header
+            p
+            h2
+        .membership-card-info
+            // margin-bottom: 28px
+            p
+        .membership-card-footer
+            .price
+                h4
+                    span
+            // &.notSummarized
+            //     margin-top: 20px
         &.mDisplay
             &:nth-child(n+4)
 
