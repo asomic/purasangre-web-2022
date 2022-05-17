@@ -11,7 +11,7 @@ const dataCoaches = [
       "CrossFit Aerobic Capacity Trainer",
       "CrossFit Gymnastic Trainer",
     ],
-    image: "coach-coto.jpg",
+    image: "coach-coto.webp",
   },
   {
     name: "Miguel Moreno",
@@ -26,7 +26,7 @@ const dataCoaches = [
       "Ex Coach Eternity CrossFit South",
       "Ex Coach CrossFit Santiago (CFS)",
     ],
-    image: "coach-mike.jpg",
+    image: "coach-mike.webp",
   },
   {
     name: "Joaquín Muñoz",
@@ -39,7 +39,7 @@ const dataCoaches = [
       "CrossFit Gymnastic",
       "CrossFit Aerobic Capacity",
     ],
-    image: "coach-joaquin.jpg",
+    image: "coach-joaquin.webp",
   },
   {
     name: "Pedro Torres",
@@ -52,7 +52,7 @@ const dataCoaches = [
       "10º Elite Wodstock 2019 (Nacional)",
       "9º Nacional Open CF Games 2021",
     ],
-    image: "coach-coto.jpg",
+    image: "coach-pedro.webp",
   },
 ];
 

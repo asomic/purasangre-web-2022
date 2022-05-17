@@ -14,7 +14,7 @@ const NutricionPage = ({ location }) => {
       <PageHeader
         title="Nutrición"
         desc="Complementa tus entrenamientos con una alimentación adecuada"
-        image="/backpage-.jpg"
+        image="/backpage-nutricion.webp"
       />
       <Infocards>
         <Infocardimage image="/back-5.webp" />
@@ -33,7 +33,7 @@ const NutricionPage = ({ location }) => {
             </p>
           </div>
         </Infocarddata>
-        <Infocardimage image="/back-6.webp" />
+        <Infocardimage image="/back-9.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <h1>

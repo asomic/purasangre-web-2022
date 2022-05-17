@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import Footer from "./footer";
@@ -7,6 +7,16 @@ import "../styles/globals.sass";
 import FixBar from "../components/fixBar";
 
 const Layout = ({ pageTitle, children, pathname }) => {
+  const [blockScroll, setBlockScroll] = useState(false);
+
+  useEffect(() => {
+    if (blockScroll) {
+      document.body.classList.add("block-scroll");
+    } else {
+      document.body.classList.remove("block-scroll");
+    }
+  }, [blockScroll]);
+
   return (
     <div>
       <Helmet>
@@ -27,7 +37,7 @@ const Layout = ({ pageTitle, children, pathname }) => {
           rel="stylesheet"
         ></link>
       </Helmet>
-      <Header />
+      <Header setBlockScroll={setBlockScroll} />
       {children}
       <Footer />
       <FixBar />

@@ -5,12 +5,18 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import WhatsappIcon from "../images/icon-whatsapp.svg";
 
-const Header = () => {
+const Header = ({ setBlockScroll }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [burgerChange, setBurgerChange] = useState(true);
 
   function menuTrigger() {
-    menuOpen === true ? setMenuOpen(false) : setMenuOpen(true);
+    if (menuOpen) {
+      setMenuOpen(false);
+      setBlockScroll(false);
+    } else {
+      setMenuOpen(true);
+      setBlockScroll(true);
+    }
     burgerChange === true ? setBurgerChange(false) : setBurgerChange(true);
   }
 
