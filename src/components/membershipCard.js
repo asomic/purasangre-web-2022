@@ -41,7 +41,7 @@ const MembershipCard = ({ memberships, summarized }) => {
                     rel="noreferrer"
                     className="button turquoise"
                   >
-                    Comprar &gt;
+                    Contrata &gt;
                   </a>
                 )}
               </div>
@@ -70,7 +70,7 @@ const MembershipCard = ({ memberships, summarized }) => {
                   rel="noreferrer"
                   className="button turquoise"
                 >
-                  Comprar &gt;
+                  Contrata &gt;
                 </a>
               )}
             </div>

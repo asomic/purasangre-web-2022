@@ -31,7 +31,7 @@ const FixBar = () => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          Obten&nbsp;<span className="bold">3 clases gratis</span>{" "}
+          Prueba&nbsp;<span className="bold">una clase gratis</span>{" "}
           <span className="bold whatsappLink">
             <img src={whatsAppWhiteIcon} /> SOLICITA POR WHATSAPP
           </span>

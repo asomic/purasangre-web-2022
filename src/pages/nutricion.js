@@ -17,7 +17,7 @@ const NutricionPage = ({ location }) => {
         image="/backpage-nutricion.webp"
       />
       <Infocards>
-        <Infocardimage image="/back-5.webp" />
+        <Infocardimage image="/back-10.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <h1>
@@ -44,7 +44,7 @@ const NutricionPage = ({ location }) => {
           </div>
           <div className="info-card-data-body">
             <ul>
-              <li>Anamnesis Completa</li>
+              <li>Encuesta para conocer tus gustos y preferencias</li>
               <li>
                 Antropometría: Mediciones (Peso, Talla, % de grasa, % masa
                 muscular)

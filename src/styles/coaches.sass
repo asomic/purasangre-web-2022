@@ -84,6 +84,12 @@
                     .coach-header,
                     .coach-content
                     &::before
+                    .coach-inner
+                        .coach-header,
+                        .coach-content
+                            opacity: 0
+                        &::before
+                            opacity: 0
     .prev-arrow,
     .next-arrow
         display: none
@@ -135,9 +141,7 @@
                         .coach-inner
                             .coach-header,
                             .coach-content
-                                opacity: 0
                             &::before
-                                opacity: 0
 
 @media (min-width: 920px)
     .coaches
