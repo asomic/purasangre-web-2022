@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Map from "./Map";
 
 import "../styles/contact.sass";
@@ -12,9 +12,29 @@ const location = {
   lng: -71.2184862,
 };
 
+const IG_API_URL = "https://www.instagram.com/graphql/query/";
+const IG_POST_URL = "https://www.instagram.com/p";
+const queryHash = "d4d88dc1500312af6f937f7b804c68c3";
+const imagesPerPage = 6;
+
 const Contact = () => {
+  const [insta, setInsta] = useState([]);
+
+  // useEffect(() => {
+  //   fetch(none)
+  //     .then((data) => data.json())
+  //     .then((data) => {
+  //       setInsta(data);
+  //     });
+  // }, []);
+
   return (
     <section className="contact" id="contact">
+      <div>
+        {/* {insta.map((photo) => (
+          <img src={photo.node.display_url} key={photo.node.id} />
+        ))} */}
+      </div>
       <div className="contactInner">
         <div className="map">
           <Map location={location} zoomLevel={15.2} />

@@ -42,13 +42,13 @@ const Footer = () => {
               <img src={facebookIcon} />
             </a>
           </div>
-          <div className="credits">
-            <p>
-              <span>Hecho en Curicó por</span>{" "}
-              <a href="https://asomic.com">asomic</a>
-            </p>
-          </div>
         </div>
+      </div>
+      <div className="credits">
+        <p>
+          <span>Hecho en Curicó por</span>{" "}
+          <a href="https://asomic.com">asomic</a>
+        </p>
       </div>
     </footer>
   );

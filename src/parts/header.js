@@ -3,7 +3,8 @@ import { Link } from "gatsby";
 import "../styles/header.sass";
 import { StaticImage } from "gatsby-plugin-image";
 
-import WhatsappIcon from "../images/icon-whatsapp.svg";
+// import WhatsappIcon from "../images/icon-whatsapp.svg";
+import WhatsappIcon from "../components/whatsappIcon";
 
 const Header = ({ setBlockScroll }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -84,8 +85,9 @@ const Header = ({ setBlockScroll }) => {
               className="button pink"
               target="_blank"
               rel="noreferrer noopener"
+              href="https://wa.me/56940207699?text=Hola"
             >
-              <img src={WhatsappIcon} />
+              <WhatsappIcon />
               Contáctanos via Whatsapp &gt;
             </a>
           </div>

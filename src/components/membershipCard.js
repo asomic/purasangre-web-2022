@@ -2,6 +2,8 @@ import React from "react";
 
 import "../styles/membershipCard.sass";
 
+import WhatsappIcon from "./whatsappIcon";
+
 const MembershipCard = ({ memberships, summarized }) => {
   const currency = function (number) {
     return new Intl.NumberFormat("es-CL", {
@@ -17,10 +19,8 @@ const MembershipCard = ({ memberships, summarized }) => {
         <h2>{memberships.info.name}</h2>
       </div>
       <div className="membership-card-info">
-        <p>
-          {memberships.info.days} <br />
-          {memberships.info.hours}
-        </p>
+        <p>{memberships.info.days}</p>
+        <p>{memberships.info.hours}</p>
       </div>
 
       {summarized
@@ -34,7 +34,7 @@ const MembershipCard = ({ memberships, summarized }) => {
                     /{period.name === "Mensual" ? "mes" : period.name}
                   </span>
                 </div>
-                {period.buyable && (
+                {period.buyable ? (
                   <a
                     href={`https://admin.purasangrecrossfit.cl/new-user/${period.id}/create`}
                     target="_blank"
@@ -42,6 +42,16 @@ const MembershipCard = ({ memberships, summarized }) => {
                     className="button turquoise"
                   >
                     Contrata &gt;
+                  </a>
+                ) : (
+                  <a
+                    href="https://wa.me/56940207699?text=Hola,%20quiero%20saber%20mas%20sobre%20el%20plan..."
+                    className="button pink"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <WhatsappIcon />
+                    Contáctanos via Whatsapp &gt;
                   </a>
                 )}
               </div>
@@ -63,7 +73,7 @@ const MembershipCard = ({ memberships, summarized }) => {
                     : period.name}
                 </span>
               </div>
-              {period.buyable && (
+              {period.buyable ? (
                 <a
                   href={`https://admin.purasangrecrossfit.cl/new-user/${period.id}/create`}
                   target="_blank"
@@ -71,6 +81,16 @@ const MembershipCard = ({ memberships, summarized }) => {
                   className="button turquoise"
                 >
                   Contrata &gt;
+                </a>
+              ) : (
+                <a
+                  href="https://wa.me/56940207699?text=Hola,%20quiero%20saber%20mas%20sobre%20el%20plan..."
+                  className="button pink"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <WhatsappIcon />
+                  Contáctanos via Whatsapp &gt;
                 </a>
               )}
             </div>

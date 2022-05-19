@@ -74,6 +74,9 @@ const Schedules = () => {
         <p className="title">Abreviatura Planes</p>
         <div className="explanation-content">
           <p>
+            <span>6AM</span>Plan 6 AM
+          </p>
+          <p>
             <span>Full</span>Plan Full
           </p>
           <p>
@@ -140,6 +143,13 @@ const Schedules = () => {
                         }`}
                       >
                         FULL
+                      </p>
+                      <p
+                        className={`membership ${
+                          schedule.memberships.seis && "active"
+                        }`}
+                      >
+                        6AM
                       </p>
                       <p
                         className={`membership ${

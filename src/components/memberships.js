@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 
-import dataMemberships from "../lib/dataMemberships";
 import MembershipCard from "../components/MembershipCard";
 
 import "../styles/memberships.sass";
@@ -15,6 +14,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
     fetch(`https://admin.purasangrecrossfit.cl/api/planes/contractables`)
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
+        console.log(resultData);
         const getFullPlans = () => {
           const filteredPlans = resultData.plans.filter((item) =>
             item.plan.startsWith("Full")
@@ -189,6 +189,35 @@ const Memberships = ({ summarized, title, moreLink }) => {
           return content;
         };
 
+        const getSeisAm = () => {
+          const filteredPlans = resultData.plans.filter((item) =>
+            item.plan.startsWith("6 AM")
+          );
+          const result = filteredPlans.map((item) => {
+            return {
+              id: item.id,
+              name: item.period,
+              price: 0,
+              buyable: false,
+            };
+          });
+
+          const content = [
+            {
+              info: {
+                name: "6 AM",
+                hours: filteredPlans[0].schedule_hours,
+                days: filteredPlans[0].schedule_days,
+              },
+              periods: {
+                result,
+              },
+            },
+          ];
+
+          return content;
+        };
+
         const getPersonalizado = () => {
           const filteredPlans = resultData.plans.filter((item) =>
             item.plan.startsWith("Plan Personalizado")
@@ -205,9 +234,9 @@ const Memberships = ({ summarized, title, moreLink }) => {
           const content = [
             {
               info: {
-                name: "Plan Personalizado",
-                hours: "Horario a convenir con el coach",
-                days: "Incluye un mes de asesoria nutricional",
+                name: "Personalizado",
+                hours: "",
+                days: "Enfocado en lograr tus objetivos con una planificación hecha exclusivamente para ti por profesionales del CrossFit. El coach estará siempre a tu lado, te irá enseñando, corrigiendo y motivando 1 a 1, para lograr tu mejor versión. Horario a convenir con el coach, incluye un mes de asesoria nutricional.",
               },
               periods: {
                 result,
@@ -225,11 +254,14 @@ const Memberships = ({ summarized, title, moreLink }) => {
           ...getAmClases(),
           ...getLunchClases(),
           ...getEstudiantesClases(),
+          ...getSeisAm(),
           ...getPersonalizado(),
         ];
         setMembershipsData(thePlans);
       });
   }, []);
+
+  // console.log(membershipsData);
 
   return (
     <section className={`memberships ${summarized ? "onIndex" : ""}`}>

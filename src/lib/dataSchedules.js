@@ -4,9 +4,24 @@ const dataSchedules = [
     priority: 1,
     schedules: [
       {
+        hour: "06:00",
+        discipline: "CrossFit",
+        memberships: {
+          seis: true,
+          full: false,
+          doce: false,
+          ocho: false,
+          am: false,
+          lunch: false,
+          est: false,
+        },
+        span: 1,
+      },
+      {
         hour: "07:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -20,6 +35,7 @@ const dataSchedules = [
         hour: "08:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -33,10 +49,11 @@ const dataSchedules = [
         hour: "09:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
-          am: true,
+          am: false,
           lunch: false,
           est: true,
         },
@@ -46,6 +63,7 @@ const dataSchedules = [
         hour: "10:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -59,6 +77,7 @@ const dataSchedules = [
         hour: "11:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -72,6 +91,7 @@ const dataSchedules = [
         hour: "12:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -85,6 +105,7 @@ const dataSchedules = [
         hour: "13:15",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -98,6 +119,7 @@ const dataSchedules = [
         hour: "15:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -111,6 +133,7 @@ const dataSchedules = [
         hour: "16:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -124,6 +147,7 @@ const dataSchedules = [
         hour: "17:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -137,6 +161,7 @@ const dataSchedules = [
         hour: "18:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -150,6 +175,7 @@ const dataSchedules = [
         hour: "19:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -163,6 +189,7 @@ const dataSchedules = [
         hour: "20:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -176,6 +203,7 @@ const dataSchedules = [
         hour: "21:00",
         discipline: "CrossFit",
         memberships: {
+          seis: false,
           full: true,
           doce: true,
           ocho: true,
@@ -196,6 +224,7 @@ const dataSchedules = [
         hour: "",
         discipline: "",
         memberships: {
+          seis: false,
           full: false,
           doce: false,
           ocho: false,
@@ -203,30 +232,32 @@ const dataSchedules = [
           lunch: false,
           est: false,
         },
-        span: 1,
+        span: 3,
       },
       {
         hour: "08:30",
         discipline: "Barbell Club",
         memberships: {
+          seis: true,
           full: true,
           doce: true,
           ocho: true,
-          am: false,
-          lunch: false,
+          am: true,
+          lunch: true,
           est: true,
         },
-        span: 2,
+        span: 1,
       },
       {
-        hour: "10:00",
-        discipline: "CrossFit",
+        hour: "09:45",
+        discipline: "Barbell Club",
         memberships: {
+          seis: true,
           full: true,
           doce: true,
           ocho: true,
-          am: false,
-          lunch: false,
+          am: true,
+          lunch: true,
           est: true,
         },
         span: 1,
@@ -235,11 +266,12 @@ const dataSchedules = [
         hour: "11:00",
         discipline: "CrossFit",
         memberships: {
+          seis: true,
           full: true,
           doce: true,
           ocho: true,
-          am: false,
-          lunch: false,
+          am: true,
+          lunch: true,
           est: true,
         },
         span: 1,
@@ -248,11 +280,12 @@ const dataSchedules = [
         hour: "12:00",
         discipline: "CrossFit",
         memberships: {
+          seis: true,
           full: true,
           doce: true,
           ocho: true,
-          am: false,
-          lunch: false,
+          am: true,
+          lunch: true,
           est: true,
         },
         span: 1,
@@ -262,6 +295,7 @@ const dataSchedules = [
         hour: "",
         discipline: "",
         memberships: {
+          seis: false,
           full: false,
           doce: false,
           ocho: false,
