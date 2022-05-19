@@ -19,6 +19,10 @@ body
 .block-scroll
   overflow: hidden
 
+@media (min-width: 1024px)
+  .block-scroll
+    overflow: visible
+
 // Typo settings
 p
   font-size: 16px
@@ -104,6 +108,7 @@ strong,
   color: white
   border-color: white
   transition: all ease-in-out 0.3s
+  border-radius: 4px
   svg
     margin-right: 8px
   &:hover
