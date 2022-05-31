@@ -147,7 +147,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
           const content = [
             {
               info: {
-                name: "Plan Estudiante",
+                name: "Estudiante",
                 hours: filteredPlans[0].schedule_hours,
                 days: filteredPlans[0].schedule_days,
               },

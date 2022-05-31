@@ -50,7 +50,7 @@ const Values = () => {
             >
               <h3>Sin egos</h3>
               <p>
-                En Pura Sangre compitirás contigo mismo, mejorando tus
+                En Pura Sangre competirás contigo mismo, mejorando tus
                 capacidades y los resultados llegarán por si solos.
               </p>
             </div>

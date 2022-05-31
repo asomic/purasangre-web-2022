@@ -37,7 +37,7 @@ const Disciplines = () => {
           <Link
             to="/nutricion"
             className="discipline-card"
-            style={{ backgroundImage: "url(/back-nutricion.webp)" }}
+            style={{ backgroundImage: "url(/back-10.webp)" }}
           >
             <h2>Nutrición</h2>
             <p>Complementa tus entrenamientos para lograr tus objetivos</p>
