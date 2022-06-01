@@ -51,6 +51,24 @@
         &.mDisplay
             &:nth-child(n+4)
 
+@media (min-width: 1200px)
+    .membership-card
+        display: grid
+        .membership-card-header
+            p
+            h2
+        .membership-card-info
+            p
+        .membership-card-footer
+            .price
+                h4
+                    span
+        &.mDisplay
+            &:nth-child(n+4)
+        &:nth-child(7)
+            .membership-card-info
+                margin-bottom: -14px
+
 @media (min-width: 1280px)
     .membership-card
         padding: 28px 30px 20px

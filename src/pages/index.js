@@ -9,6 +9,7 @@ import Coaches from "../components/coaches";
 import Values from "../components/values";
 import TheApp from "../components/theApp";
 import Contact from "../components/contact";
+import InstaFeed from "../components/instaFeed";
 
 const IndexPage = ({ location }) => {
   return (

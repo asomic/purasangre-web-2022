@@ -66,15 +66,21 @@ const TheApp = () => {
               />
             </a>
           </div>
-          <a
-            className="by"
-            target={`_blank`}
-            href="https://nfit.app/?ref=purasangre"
-            rel={`noopener noreferrer`}
-          >
-            <p>powered by</p>
-            <StaticImage src="../images/icon-nfit.png" alt="NFIT" width={25} />
-          </a>
+          <div className="by-wrapper">
+            <a
+              className="by"
+              target={`_blank`}
+              href="https://nfit.app/?ref=purasangre"
+              rel={`noopener noreferrer`}
+            >
+              <p>powered by</p>
+              <StaticImage
+                src="../images/icon-nfit.png"
+                alt="NFIT"
+                width={25}
+              />
+            </a>
+          </div>
         </div>
       </div>
     </section>

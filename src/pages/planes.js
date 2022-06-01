@@ -10,7 +10,7 @@ const PlanesPage = ({ location }) => {
       <PageHeader
         title="Planes"
         desc="Planes para ser un Purasangre"
-        image="/backpage-planes.webp"
+        image="/backpage-planes-alt.webp"
       />
       <Memberships title="Todos nuestros planes" />
       <Contact />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Map from "./Map";
+import InstaFeed from "./instaFeed";
 
 import "../styles/contact.sass";
 
@@ -20,58 +21,48 @@ const imagesPerPage = 6;
 const Contact = () => {
   const [insta, setInsta] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(none)
-  //     .then((data) => data.json())
-  //     .then((data) => {
-  //       setInsta(data);
-  //     });
-  // }, []);
-
   return (
-    <section className="contact" id="contact">
-      <div>
-        {/* {insta.map((photo) => (
-          <img src={photo.node.display_url} key={photo.node.id} />
-        ))} */}
-      </div>
-      <div className="contactInner">
-        <div className="map">
-          <Map location={location} zoomLevel={15.2} />
+    <>
+      <InstaFeed />
+      <section className="contact" id="contact">
+        <div className="contactInner">
+          <div className="map">
+            <Map location={location} zoomLevel={15.2} />
+          </div>
+          <div className="data">
+            <h1 className="color-turquoiseBlue">Entrena con nosotros</h1>
+            <p>
+              <span className="bold">Pura Sangre CrossFit</span>
+              <br />
+              Camino a Zapallar con ruta 5 sur
+              <br />
+              +569 402 07 699
+              <br />
+              contacto@purasangrecrossfit.cl
+            </p>
+            <p>
+              <span className="bold">Lunes a Viernes</span>
+              <br />
+              07:00 a 14:15 hrs - 16:00 a 22:00 hrs
+            </p>
+            <p>
+              <span className="bold">Sábados</span> <br />
+              8:30 a 13:00 hrs
+            </p>
+            <a
+              href="https://wa.me/56940207699?text=Hola"
+              className="button pink"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {/* <img src={WhatsappIcon} /> */}
+              <WhatsappIcon />
+              Contáctanos via Whatsapp &gt;
+            </a>
+          </div>
         </div>
-        <div className="data">
-          <h1 className="color-turquoiseBlue">Entrena con nosotros</h1>
-          <p>
-            <span className="bold">Pura Sangre CrossFit</span>
-            <br />
-            Camino a Zapallar con ruta 5 sur
-            <br />
-            +569 402 07 699
-            <br />
-            contacto@purasangrecrossfit.cl
-          </p>
-          <p>
-            <span className="bold">Lunes a Viernes</span>
-            <br />
-            07:00 a 14:15 hrs - 16:00 a 22:00 hrs
-          </p>
-          <p>
-            <span className="bold">Sábados</span> <br />
-            8:30 a 13:00 hrs
-          </p>
-          <a
-            href="https://wa.me/56940207699?text=Hola"
-            className="button pink"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {/* <img src={WhatsappIcon} /> */}
-            <WhatsappIcon />
-            Contáctanos via Whatsapp &gt;
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -12,7 +12,7 @@ const CrossfitPage = ({ location }) => {
       <PageHeader
         title="CrossFit"
         desc="El core de Pura Sangre"
-        image="/backpage-crossfit.webp"
+        image="/backpage-crossfit-alt.webp"
       />
       <Infocards>
         <Infocardimage image="/back-1.webp" />

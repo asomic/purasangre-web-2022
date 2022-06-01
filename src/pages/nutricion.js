@@ -44,7 +44,9 @@ const NutricionPage = ({ location }) => {
           </div>
           <div className="info-card-data-body">
             <ul>
-              <li>Encuesta para conocer tus gustos y preferencias</li>
+              <li>
+                Anamnesis: Encuesta para conocer tus gustos y preferencias
+              </li>
               <li>
                 Antropometría: Mediciones (Peso, Talla, % de grasa, % masa
                 muscular)

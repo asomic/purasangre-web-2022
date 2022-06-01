@@ -16,7 +16,7 @@ const PersonalizadoPage = ({ location }) => {
       <PageHeader
         title="Personalizado"
         desc="Entrena CrossFit al ritmo que quieras"
-        image="/backpage-none.jpg"
+        image="/backpage-personalizado-alt.webp"
       />
       <Infocards>
         <Infocardimage image="/back-7.webp" />

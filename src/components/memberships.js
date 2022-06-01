@@ -14,7 +14,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
     fetch(`https://admin.purasangrecrossfit.cl/api/planes/contractables`)
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
-        console.log(resultData);
+        // console.log(resultData);
         const getFullPlans = () => {
           const filteredPlans = resultData.plans.filter((item) =>
             item.plan.startsWith("Full")
@@ -44,10 +44,44 @@ const Memberships = ({ summarized, title, moreLink }) => {
           return content;
         };
 
+        // const getDoceClases = () => {
+        //   const filteredPlans = resultData.plans.filter((item) =>
+        //     item.plan.startsWith("12 clases")
+        //   );
+        //   const result = filteredPlans.map((item) => {
+        //     return {
+        //       id: item.id,
+        //       name: item.period,
+        //       price: item.amount,
+        //       buyable: true,
+        //     };
+        //   });
+
+        //   const content = [
+        //     {
+        //       info: {
+        //         name: "12 Clases",
+        //         hours: filteredPlans[0].schedule_hours,
+        //         days: filteredPlans[0].schedule_days,
+        //       },
+        //       periods: {
+        //         result,
+        //       },
+        //     },
+        //   ];
+
+        //   return content;
+        // };
+
         const getDoceClases = () => {
-          const filteredPlans = resultData.plans.filter((item) =>
-            item.plan.startsWith("12 clases")
-          );
+          const filteredPlans = resultData.plans.filter((item) => {
+            if (
+              item.plan.startsWith("12 clases") ||
+              item.plan.startsWith("medium")
+            ) {
+              return item;
+            }
+          });
           const result = filteredPlans.map((item) => {
             return {
               id: item.id,
@@ -56,11 +90,10 @@ const Memberships = ({ summarized, title, moreLink }) => {
               buyable: true,
             };
           });
-
           const content = [
             {
               info: {
-                name: "12 Clases",
+                name: "Medium",
                 hours: filteredPlans[0].schedule_hours,
                 days: filteredPlans[0].schedule_days,
               },
@@ -103,9 +136,17 @@ const Memberships = ({ summarized, title, moreLink }) => {
         };
 
         const getOchoClases = () => {
-          const filteredPlans = resultData.plans.filter((item) =>
-            item.plan.startsWith("8 Sesiones")
-          );
+          // const filteredPlans = resultData.plans.filter((item) =>
+          //   item.plan.startsWith("8 Sesiones")
+          // );
+          const filteredPlans = resultData.plans.filter((item) => {
+            if (
+              item.plan.startsWith("8 Sesiones") ||
+              item.plan.startsWith("small")
+            ) {
+              return item;
+            }
+          });
           const result = filteredPlans.map((item) => {
             return {
               id: item.id,
@@ -118,7 +159,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
           const content = [
             {
               info: {
-                name: "8 Sesiones",
+                name: "Small",
                 hours: filteredPlans[0].schedule_hours,
                 days: filteredPlans[0].schedule_days,
               },
@@ -197,7 +238,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
             return {
               id: item.id,
               name: item.period,
-              price: 0,
+              price: 80000,
               buyable: false,
             };
           });
@@ -236,10 +277,23 @@ const Memberships = ({ summarized, title, moreLink }) => {
               info: {
                 name: "Personalizado",
                 hours: "",
-                days: "Enfocado en lograr tus objetivos con una planificación hecha exclusivamente para ti por profesionales del CrossFit. El coach estará siempre a tu lado, te irá enseñando, corrigiendo y motivando 1 a 1, para lograr tu mejor versión. Horario a convenir con el coach, incluye un mes de asesoria nutricional.",
+                days: "Enfocado en lograr tus objetivos con una planificación hecha exclusivamente para ti por profesionales del CrossFit. El coach estará siempre a tu lado, te irá enseñando, corrigiendo y motivando 1 a 1, para lograr tu mejor versión. Horario a convenir con el coach.",
               },
               periods: {
-                result,
+                result: [
+                  {
+                    buyable: false,
+                    id: 27,
+                    name: "mes (3 veces por semana)",
+                    price: 130000,
+                  },
+                  {
+                    buyable: false,
+                    id: 27,
+                    name: "mes (5 veces por semana)",
+                    price: 150000,
+                  },
+                ],
               },
             },
           ];
@@ -256,12 +310,13 @@ const Memberships = ({ summarized, title, moreLink }) => {
           ...getEstudiantesClases(),
           ...getSeisAm(),
           ...getPersonalizado(),
+          // ...prueba(),
         ];
         setMembershipsData(thePlans);
       });
   }, []);
 
-  // console.log(membershipsData);
+  console.log(membershipsData);
 
   return (
     <section className={`memberships ${summarized ? "onIndex" : ""}`}>
