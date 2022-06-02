@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 
-import MembershipCard from "../components/MembershipCard";
+import MembershipCard from "./MembershipCard";
 
 import "../styles/memberships.sass";
 
