@@ -142,6 +142,10 @@
 .notIndex
     .membership-card
         &:last-child
+            .membership-card-footer
+                &:nth-last-child(2)
+                    .button
+                        display: none
 
 @media (min-width: 1200px)
     .notIndex
@@ -155,11 +159,6 @@
                 .button
                     padding: 10px 13px
                     font-size: 12px
-            &:last-child
-                .membership-card-footer
-                    &:nth-last-child(2)
-                        .button
-                            display: none
 
 @media (min-width: 1280px)
     .notIndex
