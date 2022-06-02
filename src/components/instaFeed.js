@@ -17,7 +17,7 @@ const InstaFeed = () => {
         src="https://cdn.lightwidget.com/widgets/24eb3c2ebeaa5b7cbc26dde5d1057da5.html"
         scrolling="no"
         allowtransparency="true"
-        class="lightwidget-widget"
+        className="lightwidget-widget"
       ></iframe>
     </section>
   );
