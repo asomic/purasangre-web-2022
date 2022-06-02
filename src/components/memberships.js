@@ -316,7 +316,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
       });
   }, []);
 
-  console.log(membershipsData);
+  // console.log(membershipsData);
 
   return (
     <section className={`memberships ${summarized ? "onIndex" : ""}`}>
