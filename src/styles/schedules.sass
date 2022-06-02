@@ -106,6 +106,10 @@
                         height: 100%
                         opacity: 1
 
+                &.span-10,
+                &.span-11
+                    display: none
+
 @media (min-width: 768px)
     .schedules
         padding: 34px 6vw 44px
@@ -140,7 +144,7 @@
                     &.span-2
                         min-height: 80px
                         align-items: flex-start
-                        padding: 
+                        padding:
                             top: 14px
                             bottom: 10px
                     &.span-3
@@ -155,8 +159,12 @@
                         min-height: 355px
                     &.span-8
                         min-height: 410px
+                    &.span-10
+                        min-height: 519px
+                        display: inherit
                     &.span-11
                         min-height: 574px
+                        display: inherit
 
 @media (min-width: 1200px)
     .schedules
@@ -219,15 +227,17 @@
                         min-height: 325px
                     &.span-8
                         min-height: 377px
+                    &.span-10
+                        min-height: 478px
                     &.span-11
-                        min-height: 528px
+                        min-height: 518px
 
 @media (min-width: 1400px)
     .schedules
         padding: 40px 0 50px
         .explanation
             max-width: 1160px
-            margin: 
+            margin:
                 left: auto
                 right: auto
             .title
@@ -236,7 +246,7 @@
                     span
         .schedule-table
             max-width: 1160px
-            margin: 
+            margin:
                 left: auto
                 right: auto
             .days

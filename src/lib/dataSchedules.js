@@ -53,7 +53,7 @@ const dataSchedules = [
           full: true,
           doce: true,
           ocho: true,
-          am: false,
+          am: true,
           lunch: false,
           est: true,
         },
@@ -103,20 +103,6 @@ const dataSchedules = [
       },
       {
         hour: "13:15",
-        discipline: "CrossFit",
-        memberships: {
-          seis: false,
-          full: true,
-          doce: true,
-          ocho: true,
-          am: false,
-          lunch: true,
-          est: true,
-        },
-        span: 1,
-      },
-      {
-        hour: "15:00",
         discipline: "CrossFit",
         memberships: {
           seis: false,
@@ -303,7 +289,7 @@ const dataSchedules = [
           lunch: false,
           est: false,
         },
-        span: 11,
+        span: 10,
       },
     ],
   },
