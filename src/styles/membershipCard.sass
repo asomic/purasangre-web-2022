@@ -54,6 +54,7 @@
 @media (min-width: 1200px)
     .membership-card
         display: grid
+        padding: 26px 22px 18px 27px
         .membership-card-header
             p
             h2
@@ -62,7 +63,12 @@
         .membership-card-footer
             .price
                 h4
-                    span
+                    // font-size: 21px
+                span
+                    font-size: 14px
+            .button
+                // padding: 10px 13px
+                // font-size: 12px
         &.mDisplay
             &:nth-child(n+4)
         &:nth-child(7)
@@ -81,12 +87,109 @@
         .membership-card-footer
             .price
                 h4
-                    span
+                span
+            .button
+
             // &.notSummarized
             //     margin-top: 20px
         &.mDisplay
             &:nth-child(n+4)
+        &.notmDisplay
+            .membership-card-footer
+                .price
+                    h4
+                        font-size: 23px
+                    span
+                        // font-size: 13px
+                .button
+                    // padding: 10px 13px
+                    // font-size: 12px
+
+@media (min-width: 1440px)
+    .membership-card
+        // padding: 28px 30px 20px
+        .membership-card-header
+            p
+            h2
+        .membership-card-info
+            margin-bottom: 28px
+            p
+        .membership-card-footer
+            .price
+                h4
+                span
+            .button
+
+            // &.notSummarized
+            //     margin-top: 20px
+        &.mDisplay
+            &:nth-child(n+4)
+        &.notmDisplay
+            .membership-card-footer
+                .price
+                    h4
+                        font-size: 24px
+                    span
+                        // font-size: 13px
+                .button
+                    // padding: 10px 13px
+                    // font-size: 12px
 
 .onIndex
     .membership-card
         background-color: $eerieBlack
+
+.notIndex
+    .membership-card
+        &:last-child
+
+@media (min-width: 1200px)
+    .notIndex
+        .membership-card
+            .membership-card-footer
+                .price
+                    h4
+                        font-size: 21px
+                    span
+                        font-size: 13px
+                .button
+                    padding: 10px 13px
+                    font-size: 12px
+            &:last-child
+                .membership-card-footer
+                    &:nth-last-child(2)
+                        .button
+                            display: none
+
+@media (min-width: 1280px)
+    .notIndex
+        .membership-card
+            .membership-card-footer
+                .price
+                    h4
+                        font-size: 23px
+                    span
+                        // font-size: 13px
+                .button
+                    // padding: 10px 13px
+                    // font-size: 12px
+            &:last-child
+                // background-color: #5f5f5f
+
+@media (min-width: 1440px)
+    .notIndex
+        .membership-card
+            .membership-card-info
+                margin-bottom: 28px
+                p
+            .membership-card-footer
+                .price
+                    h4
+                        font-size: 24px
+                    span
+                        // font-size: 13px
+                .button
+                    // padding: 10px 13px
+                    // font-size: 12px
+            &:last-child
+                // background-color: #5f5f5f

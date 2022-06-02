@@ -12,7 +12,10 @@ const PlanesPage = ({ location }) => {
         desc="Planes para ser un Purasangre"
         image="/backpage-planes-alt.webp"
       />
-      <Memberships title="Todos nuestros planes" />
+      <Memberships
+        title="Todos nuestros planes"
+        className="if-page-planes-add-class-smallCards"
+      />
       <Contact />
     </Layout>
   );

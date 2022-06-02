@@ -319,7 +319,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
   // console.log(membershipsData);
 
   return (
-    <section className={`memberships ${summarized ? "onIndex" : ""}`}>
+    <section className={`memberships ${summarized ? "onIndex" : "notIndex"}`}>
       <div className="memberships-header">
         <h1 className="color-turquoiseBlue">{title}</h1>
       </div>

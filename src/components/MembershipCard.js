@@ -14,7 +14,11 @@ const MembershipCard = ({ memberships, summarized }) => {
   };
 
   return (
-    <div className={`membership-card ${memberships.summarized && "mDisplay"}`}>
+    <div
+      className={`membership-card ${
+        memberships.summarized ? "mDisplay" : "notmDisplay"
+      }`}
+    >
       <div className="membership-card-header">
         <p>Plan</p>
         <h2>{memberships.info.name}</h2>

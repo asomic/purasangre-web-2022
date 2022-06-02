@@ -129,7 +129,7 @@ const Schedules = () => {
                         }`}
                         onClick={() => openAvailablePlans(schedule.id)}
                       >
-                        ▶
+                        <img src="/icon-arrow-down.png" alt="ícono de flecha" />
                       </div>
                     </div>
                     <div
