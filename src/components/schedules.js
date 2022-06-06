@@ -74,19 +74,19 @@ const Schedules = () => {
         <p className="title">Abreviatura Planes</p>
         <div className="explanation-content">
           <p>
-            <span>6AM</span>Plan 6 AM
-          </p>
-          <p>
             <span>Full</span>Plan Full
           </p>
           <p>
-            <span>12</span>plan 12 clases
+            <span>M</span>plan medium
           </p>
           <p>
-            <span>8</span>plan 8 sesiones
+            <span>S</span>plan small
           </p>
           <p>
-            <span>am</span>plan am
+            <span>6AM</span>Plan 6 AM
+          </p>
+          <p>
+            <span>AM</span>plan am
           </p>
           <p>
             <span>lunch</span>plan lunch
@@ -146,24 +146,24 @@ const Schedules = () => {
                       </p>
                       <p
                         className={`membership ${
-                          schedule.memberships.seis && "active"
-                        }`}
-                      >
-                        6AM
-                      </p>
-                      <p
-                        className={`membership ${
                           schedule.memberships.doce && "active"
                         }`}
                       >
-                        12
+                        M
                       </p>
                       <p
                         className={`membership ${
                           schedule.memberships.ocho && "active"
                         }`}
                       >
-                        8
+                        S
+                      </p>
+                      <p
+                        className={`membership ${
+                          schedule.memberships.seis && "active"
+                        }`}
+                      >
+                        6AM
                       </p>
                       <p
                         className={`membership ${
