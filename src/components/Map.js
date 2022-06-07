@@ -5,11 +5,7 @@ import LocationPin from "./LocationPin";
 import mapStyles from "../styles/mapStyles";
 
 const Map = ({ location, zoomLevel }) => {
-  const API_KEY = process.env.GOOGLE_MAPS_APIKEY;
-
-  // function _onClick(obj) {
-  //   // console.log(obj.x, obj.y, obj.lat, obj.lng, obj.event);
-  // }
+  const API_KEY = process.env.GATSBY_GOOGLE_MAPS_APIKEY;
 
   return (
     <>
