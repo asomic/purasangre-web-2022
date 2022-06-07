@@ -27,7 +27,7 @@ const FixBar = () => {
     <>
       <div className={`fix-bar ${barState ? "" : "closed"}`}>
         <a
-          href="https://wa.me/56940207699?text=Hola,%20quiero%20solicitar%20las%20tres%20clases%20gratis"
+          href="https://wa.me/56940207699?text=Hola,%20quiero%20solicitar%20una%20clase%20gratis"
           target="_blank"
           rel="noreferrer noopener"
         >
