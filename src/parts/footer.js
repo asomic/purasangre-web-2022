@@ -46,13 +46,19 @@ const Footer = () => {
       </div>
       <div className="credits">
         <p>
-          <a href="/contrato.pdf" target="_blank" rel="noreferrer noopener">
+          <a href="/contrato.pdf" target="_blank" rel="noopener noreferrer">
             Reglamento y contrato Pura Sangre CrossFit
           </a>
         </p>
         <p>
           <span>Hecho en Curicó por</span>{" "}
-          <a href="https://asomic.com">asomic</a>
+          <a
+            href="https://asomic.com"
+            target={"_blank"}
+            rel={"noreferrer noopener"}
+          >
+            asomic
+          </a>
         </p>
       </div>
     </footer>
