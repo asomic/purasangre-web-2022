@@ -50,7 +50,7 @@ const MembershipCard = ({ memberships, summarized }) => {
                   </a>
                 ) : (
                   <a
-                    href="https://wa.me/56940207699?text=Hola,%20quiero%20saber%20mas%20sobre%20el%20plan..."
+                    href={`https://wa.me/56940207699?text=Hola,%20quiero%20saber%20mas%20sobre%20el%20plan%20${memberships.info.name}`}
                     className="button pink"
                     target="_blank"
                     rel="noreferrer noopener"
@@ -89,7 +89,7 @@ const MembershipCard = ({ memberships, summarized }) => {
                 </a>
               ) : (
                 <a
-                  href="https://wa.me/56940207699?text=Hola,%20quiero%20saber%20mas%20sobre%20el%20plan..."
+                  href={`https://wa.me/56940207699?text=Hola,%20quiero%20saber%20mas%20sobre%20el%20plan%20${memberships.info.name}`}
                   className="button pink"
                   target="_blank"
                   rel="noreferrer noopener"

@@ -68,7 +68,7 @@ const NutricionPage = ({ location }) => {
               </p>
             </div>
             <a
-              href="https://wa.me/56940207699?text=Hola"
+              href="https://wa.me/56940207699?text=Hola,%20estoy%20interesado%20en%20el%20servicio%20Nutricional%20🥗"
               className="button pink"
               target="_blank"
               rel="noreferrer"

@@ -50,7 +50,7 @@ const Contact = () => {
               8:30 a 13:00 hrs
             </p>
             <a
-              href="https://wa.me/56940207699?text=Hola"
+              href="https://wa.me/56940207699?text=Hola,%20quiero%20unirme%20a%20Pura%20Sangre%20CrossFit%20🔥"
               className="button pink"
               target="_blank"
               rel="noreferrer noopener"
