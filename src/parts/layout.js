@@ -29,6 +29,9 @@ const Layout = ({ pageTitle, children, pathname }) => {
         ) : (
           <title>{pageTitle} — Pura Sangre CrossFit</title>
         )}
+        <meta property="og:image" content="/psc-social.avif" />
+        <meta property="og:image:width" content="900" />
+        <meta property="og:image:height" content="470" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link

@@ -6,6 +6,9 @@ module.exports = {
   siteMetadata: {
     title: `Pura Sangre CrossFit`,
     siteUrl: `https://purasangrecrossfit.cl`,
+    description: `El único box de CrossFit certificado de la región`,
+    url: `https://purasangrecrossfit.cl`,
+    image: "/psc-social.avif",
   },
   plugins: [
     "gatsby-plugin-sass",
