@@ -14,7 +14,6 @@ const Memberships = ({ summarized, title, moreLink }) => {
     fetch(`https://admin.purasangrecrossfit.cl/api/planes/contractables`)
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
-        // console.log(resultData);
         const getFullPlans = () => {
           const filteredPlans = resultData.plans.filter((item) =>
             item.plan.startsWith("Full")
@@ -28,20 +27,19 @@ const Memberships = ({ summarized, title, moreLink }) => {
             };
           });
 
-          const content = [
+
+          return filteredPlans[0] ? [
             {
               info: {
                 name: "Full",
-                hours: filteredPlans[0].schedule_hours,
+                hours: filteredPlans[0] ? filteredPlans[0].schedule_hours : '',
                 days: filteredPlans[0].schedule_days,
               },
               periods: {
                 result,
               },
             },
-          ];
-
-          return content;
+          ] : [];
         };
 
         // const getDoceClases = () => {
@@ -57,7 +55,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
         //     };
         //   });
 
-        //   const content = [
+//             return filteredPlans[0] ? [
         //     {
         //       info: {
         //         name: "12 Clases",
@@ -68,9 +66,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
         //         result,
         //       },
         //     },
-        //   ];
-
-        //   return content;
+        //   ] : [];
         // };
 
         const getDoceClases = () => {
@@ -90,7 +86,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
               buyable: true,
             };
           });
-          const content = [
+            return filteredPlans[0] ? [
             {
               info: {
                 name: "Medium",
@@ -101,9 +97,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
                 result,
               },
             },
-          ];
-
-          return content;
+          ] : [];
         };
 
         const getAmClases = () => {
@@ -119,7 +113,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
             };
           });
 
-          const content = [
+            return filteredPlans[0] ? [
             {
               info: {
                 name: "AM",
@@ -130,9 +124,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
                 result,
               },
             },
-          ];
-
-          return content;
+          ] : [];
         };
 
         const getOchoClases = () => {
@@ -156,7 +148,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
             };
           });
 
-          const content = [
+            return filteredPlans[0] ? [
             {
               info: {
                 name: "Small",
@@ -167,9 +159,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
                 result,
               },
             },
-          ];
-
-          return content;
+          ] : [];
         };
 
         const getEstudiantesClases = () => {
@@ -185,7 +175,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
             };
           });
 
-          const content = [
+            return filteredPlans[0] ? [
             {
               info: {
                 name: "Estudiante",
@@ -196,9 +186,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
                 result,
               },
             },
-          ];
-
-          return content;
+          ] : [];
         };
 
         const getLunchClases = () => {
@@ -214,7 +202,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
             };
           });
 
-          const content = [
+            return filteredPlans[0] ? [
             {
               info: {
                 name: "Lunch",
@@ -225,9 +213,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
                 result,
               },
             },
-          ];
-
-          return content;
+          ] : [];
         };
 
         const getSeisAm = () => {
@@ -243,7 +229,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
             };
           });
 
-          const content = [
+            return filteredPlans[0] ? [
             {
               info: {
                 name: "6 AM",
@@ -254,9 +240,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
                 result,
               },
             },
-          ];
-
-          return content;
+          ] : [];
         };
 
         const getPersonalizado = () => {
@@ -272,7 +256,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
             };
           });
 
-          const content = [
+            return filteredPlans[0] ? [
             {
               info: {
                 name: "Personalizado",
@@ -296,9 +280,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
                 ],
               },
             },
-          ];
-
-          return content;
+          ] : [];
         };
 
         const thePlans = [
@@ -316,7 +298,6 @@ const Memberships = ({ summarized, title, moreLink }) => {
       });
   }, []);
 
-  // console.log(membershipsData);
 
   return (
     <section className={`memberships ${summarized ? "onIndex" : "notIndex"}`}>
