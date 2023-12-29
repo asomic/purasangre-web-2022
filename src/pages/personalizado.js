@@ -19,7 +19,7 @@ const PersonalizadoPage = ({ location }) => {
         image="/backpage-personalizado-alt.webp"
       />
       <Infocards>
-        <Infocardimage image="/back-7.webp" />
+        <Infocardimage image="/cristobal_clases.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <h1>
@@ -42,7 +42,7 @@ const PersonalizadoPage = ({ location }) => {
             </p>
           </div>
         </Infocarddata>
-        <Infocardimage image="/back-8.webp" />
+        <Infocardimage image="/cristobal_clases_dos.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <p className="pretitle">Plan</p>

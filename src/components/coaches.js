@@ -57,16 +57,39 @@ const Coaches = () => {
                 </div>
                 <div className="coach-content">
                   <div className="item">
-                    <p className="title">Grados</p>
-                    <p>{slide.grades}</p>
+                    {slide.grades ? (
+                      <>
+                        <p className="title">Grados</p>
+                        <p>{slide.grades}</p>
+                      </>
+                    ) : (
+                      <>
+                        <p className="title">Experiencia</p>
+                        <p>{slide.experience}</p>
+                      </>
+                    )}
                   </div>
                   <div className="item">
-                    <p className="title">Certificaciones</p>
+                    {
+                      slide.certifications ? (
+                        <>
+                          <p className="title">Certificaciones</p>
+                          <ul>
+                            {slide.certifications.map((cert, i) => {
+                              return <li key={i}>{cert}</li>;
+                            })}
+                          </ul>
+                        </>
+                      ) : null
+                    }
+                    {/* <p className="title">Certificaciones</p>
                     <ul>
-                      {slide.certifications.map((cert, i) => {
-                        return <li key={i}>{cert}</li>;
-                      })}
-                    </ul>
+                      {slide.certifications
+                        ? slide.certifications.map((cert, i) => {
+                            return <li key={i}>{cert}</li>;
+                          })
+                        : null}
+                    </ul> */}
                   </div>
                 </div>
               </div>

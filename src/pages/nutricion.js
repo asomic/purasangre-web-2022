@@ -17,7 +17,7 @@ const NutricionPage = ({ location }) => {
         image="/backpage-nutricion.webp"
       />
       <Infocards>
-        <Infocardimage image="/back-nutricion.webp" />
+        <Infocardimage image="/nutricionistas_dos.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <h1>
@@ -33,7 +33,7 @@ const NutricionPage = ({ location }) => {
             </p>
           </div>
         </Infocarddata>
-        <Infocardimage image="/back-9.webp" />
+        <Infocardimage image="/alicia_consulta.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <h1>

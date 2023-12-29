@@ -15,7 +15,7 @@ const CrossfitPage = ({ location }) => {
         image="/backpage-crossfit-alt.webp"
       />
       <Infocards>
-        <Infocardimage image="/back-1.webp" />
+        <Infocardimage image="/oscar_clases.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <h1 className="color-turquoiseBlue">CrossFit</h1>
@@ -38,7 +38,7 @@ const CrossfitPage = ({ location }) => {
             </p>
           </div>
         </Infocarddata>
-        <Infocardimage image="/back-2.webp" />
+        <Infocardimage image="/veronica_clase.webp" />
         <Infocarddata>
           <div className="info-card-data-header">
             <h1 className="color-turquoiseBlue">Clases guiadas</h1>
