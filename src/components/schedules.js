@@ -83,13 +83,7 @@ const Schedules = () => {
             <span>S</span>plan small
           </p>
           <p>
-            <span>6AM</span>Plan 6 AM
-          </p>
-          <p>
-            <span>AM</span>plan am
-          </p>
-          <p>
-            <span>lunch</span>plan lunch
+            <span>valle</span>Plan Valle
           </p>
           <p>
             <span>est</span>plan estudiante
@@ -98,7 +92,8 @@ const Schedules = () => {
       </div>
       <div className="schedule-table">
         {schedules.map((days, index) => {
-          console.log(days);
+          console.log("index");
+          console.log(index);
           return (
             <div className="days" key={index}>
               <div className="head">
@@ -160,24 +155,10 @@ const Schedules = () => {
                       </p>
                       <p
                         className={`membership ${
-                          schedule.memberships.seis && "active"
+                          schedule.memberships.valle && "active"
                         }`}
                       >
-                        6AM
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.am && "active"
-                        }`}
-                      >
-                        AM
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.lunch && "active"
-                        }`}
-                      >
-                        LUNCH
+                        VALLE
                       </p>
                       <p
                         className={`membership ${

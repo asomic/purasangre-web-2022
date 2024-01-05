@@ -6,7 +6,7 @@ import emblemIcon from "../images/emblem.svg";
 import affiliateIcon from "../images/icon-affiliate.svg";
 import coachesIcon from "../images/icon-certifiedcoaches.svg";
 import equipmentIcon from "../images/icon-equipment.svg";
-import sevenIcon from "../images/icon-seven.svg";
+import nineIcon from "../images/icon-nine.svg";
 
 const Values = () => {
   return (
@@ -23,7 +23,7 @@ const Values = () => {
         <div className="values-content">
           <div className="features-items">
             <div className="feature">
-              <img src={sevenIcon} />
+              <img src={nineIcon} />
               <p className="highlight">años</p>
               <p>de experiencia</p>
             </div>

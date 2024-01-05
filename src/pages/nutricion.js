@@ -57,13 +57,13 @@ const NutricionPage = ({ location }) => {
             </ul>
             <div className="price">
               <p>
-                $30.000
+                $35.000
                 <span>/consulta</span>
               </p>
             </div>
             <div className="price">
               <p>
-                $65.000
+                $84.000
                 <span>/plan trimestral</span>
               </p>
             </div>

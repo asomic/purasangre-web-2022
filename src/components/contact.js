@@ -43,7 +43,7 @@ const Contact = () => {
             <p>
               <span className="bold">Lunes a Viernes</span>
               <br />
-              07:00 a 14:15 hrs - 16:00 a 22:00 hrs
+              06:00 a 14:15 hrs - 16:00 a 22:00 hrs
             </p>
             <p>
               <span className="bold">Sábados</span> <br />

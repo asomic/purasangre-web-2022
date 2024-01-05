@@ -251,7 +251,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
             return {
               id: item.id,
               name: item.period,
-              price: 130000,
+              price: 150000,
               buyable: false,
             };
           });
@@ -269,13 +269,13 @@ const Memberships = ({ summarized, title, moreLink }) => {
                     buyable: false,
                     id: 27,
                     name: "mes (3 veces por semana)",
-                    price: 130000,
+                    price: 150000,
                   },
                   {
                     buyable: false,
                     id: 27,
                     name: "mes (5 veces por semana)",
-                    price: 150000,
+                    price: 180000,
                   },
                 ],
               },

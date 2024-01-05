@@ -74,7 +74,7 @@ const Header = ({ setBlockScroll }) => {
             <p>
               <strong>Lunes a Viernes</strong>
               <br />
-              07:00 a 14:15 hrs - 16:00 a 22:00 hrs
+              06:00 a 14:15 hrs - 16:00 a 22:00 hrs
             </p>
             <p>
               <strong>Sábados</strong>
