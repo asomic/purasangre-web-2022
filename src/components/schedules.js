@@ -92,8 +92,6 @@ const Schedules = () => {
       </div>
       <div className="schedule-table">
         {schedules.map((days, index) => {
-          console.log("index");
-          console.log(index);
           return (
             <div className="days" key={index}>
               <div className="head">

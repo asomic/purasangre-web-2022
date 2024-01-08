@@ -1,6 +1,6 @@
 const dataSchedules = [
   {
-    forDays: "Lunes a Viernes",
+    forDays: "Lunes a viernes",
     priority: 1,
     schedules: [
       {
@@ -8,12 +8,12 @@ const dataSchedules = [
         discipline: "CrossFit",
         memberships: {
           seis: true,
-          full: false,
-          doce: false,
-          ocho: false,
+          full: true,
+          doce: true,
+          ocho: true,
           am: false,
           valle: false,
-          est: false,
+          est: true,
         },
         span: 1,
       },
@@ -211,9 +211,46 @@ const dataSchedules = [
       },
     ],
   },
+
+  {
+    forDays: "Lunes, miércoles y jueves",
+    priority: 2,
+    schedules: [
+      {
+        hour: "20:00",
+        discipline: "Fundamentos",
+        memberships: {
+          seis: true,
+          full: true,
+          doce: true,
+          ocho: true,
+          am: true,
+          lunch: true,
+          est: true,
+          valle: true,
+        },
+        span: 1,
+      },
+      // {
+      //   noContent: true,
+      //   hour: "",
+      //   discipline: "",
+      //   memberships: {
+      //     seis: false,
+      //     full: false,
+      //     doce: false,
+      //     ocho: false,
+      //     am: false,
+      //     lunch: false,
+      //     est: false,
+      //   },
+      //   span: 2,
+      // },
+    ],
+  },
   {
     forDays: "Martes y Viernes",
-    priority: 2,
+    priority: 3,
     schedules: [
       {
         hour: "18:00",
@@ -248,7 +285,7 @@ const dataSchedules = [
   },
   {
     forDays: "Sábados",
-    priority: 1,
+    priority: 4,
     schedules: [
       {
         hour: "08:45",
