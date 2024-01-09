@@ -52,13 +52,13 @@ const PersonalizadoPage = ({ location }) => {
             <p>Horario a convenir con el coach</p>
             <div className="price">
               <p>
-                $130.000
+                $150.000
                 <span>/mes (3 veces por semana)</span>
               </p>
             </div>
             <div className="price">
               <p>
-                $150.000
+                $180.000
                 <span>/mes (5 veces por semana)</span>
               </p>
             </div>
