@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import dataSchedules from "../lib/dataSchedules";
-import {
-  // leftCol,
-  // rightCol,
-  schedule as scheduleCols,
-} from "../lib/dataSchedules2";
+import { dataSchedules } from "../lib/dataSchedules";
 import "../styles/schedules.sass";
 
 const Schedules = () => {
@@ -14,22 +9,27 @@ const Schedules = () => {
     return date + random;
   };
 
+  console.log();
+  const scheduleCols = dataSchedules.cols;
+
   const [schedules, setSchedules] = useState(
     scheduleCols.map((item) => {
-      return {
-        title: item.title,
-        schedules: item.schedules.map((item) => {
-          return {
-            id: generateID(),
-            hour: item.hour,
-            discipline: item.discipline,
-            memberships: item.memberships,
-            span: item.span,
-            noContent: item.noContent ? item.noContent : false,
-          };
-        }),
-        membershipsShow: false,
-      };
+      const elem = item.map((e) => {
+        return {
+          title: e.title,
+          schedules: e.schedules.map((schedule) => {
+            return {
+              hour: schedule.hour,
+              discipline: schedule.discipline,
+              memberships: schedule.memberships,
+              span: schedule.span,
+              id: generateID(),
+              noContent: schedule.noContent ? schedule.noContent : false,
+            };
+          }),
+        };
+      });
+      return elem;
     })
   );
 
@@ -38,32 +38,36 @@ const Schedules = () => {
   const openAvailablePlans = (index) => {
     if (firstClick) {
       setSchedules(
-        scheduleCols.map((item) => {
-          return {
-            title: item.title,
-            schedules: item.schedules.map((item) => {
-              if (item.id === index) {
-                return { ...item, membershipsShow: true };
-              } else {
-                return { ...item, membershipsShow: false };
-              }
-            }),
-          };
+        schedules.map((item) => {
+          return item.map((e) => {
+            return {
+              title: e.title,
+              schedules: e.schedules.map((schedule) => {
+                if (schedule.id === index) {
+                  return { ...schedule, membershipsShow: true };
+                } else {
+                  return { ...schedule, membershipsShow: false };
+                }
+              }),
+            };
+          });
         })
       );
       setOnFirstClick(false);
     } else {
       setSchedules(
-        scheduleCols.map((item) => {
-          return {
-            title: item.title,
-            schedules: item.schedules.map((item) => {
-              return {
-                ...item,
-                membershipsShow: false,
-              };
-            }),
-          };
+        schedules.map((item) => {
+          return item.map((e) => {
+            return {
+              title: e.title,
+              schedules: e.schedules.map((schedule) => {
+                return {
+                  ...schedule,
+                  membershipsShow: false,
+                };
+              }),
+            };
+          });
         })
       );
       setOnFirstClick(true);
@@ -94,7 +98,7 @@ const Schedules = () => {
       </div>
 
       <div className="schedule-table">
-        {scheduleCols.cols.map((col, colIndex) => (
+        {schedules.map((col, colIndex) => (
           <div key={colIndex} className="days">
             {col.map((day, dayIndex) => (
               <div key={`${colIndex}-${dayIndex}`}>
@@ -104,68 +108,76 @@ const Schedules = () => {
                 </div>
                 {day.schedules.map((schedule, scheduleIndex) => (
                   <div key={`${colIndex}-${dayIndex}-${scheduleIndex}`}>
-                    <div
-                      className={`card ${
-                        schedule.span > 1 ? "span-" + schedule.span : ""
-                      }`}
-                    >
-                      <div className="card-head">
-                        <p className="hour">{schedule.hour}</p>
-                        <p className="discipline">{schedule.discipline}</p>
-                        <div
-                          className={`arrow ${
-                            schedule.membershipsShow ? "opened" : ""
-                          }`}
-                          onClick={() => openAvailablePlans(schedule.id)}
-                        >
-                          <img
-                            src="/icon-arrow-down.png"
-                            alt="ícono de flecha"
-                          />
-                        </div>
-                      </div>
+                    {schedule.noContent ? (
                       <div
-                        className={`card-memberships ${
-                          schedule.membershipsShow ? "show" : ""
+                        className={`card noContent ${
+                          schedule.span > 1 ? "span-" + schedule.span : ""
+                        }`}
+                      ></div>
+                    ) : (
+                      <div
+                        className={`card ${
+                          schedule.span > 1 ? "span-" + schedule.span : ""
                         }`}
                       >
-                        <p
-                          className={`membership ${
-                            schedule.memberships.full && "active"
+                        <div className="card-head">
+                          <p className="hour">{schedule.hour}</p>
+                          <p className="discipline">{schedule.discipline}</p>
+                          <div
+                            className={`arrow ${
+                              schedule.membershipsShow ? "opened" : ""
+                            }`}
+                            onClick={() => openAvailablePlans(schedule.id)}
+                          >
+                            <img
+                              src="/icon-arrow-down.png"
+                              alt="ícono de flecha"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className={`card-memberships ${
+                            schedule.membershipsShow ? "show" : ""
                           }`}
                         >
-                          FULL
-                        </p>
-                        <p
-                          className={`membership ${
-                            schedule.memberships.doce && "active"
-                          }`}
-                        >
-                          M
-                        </p>
-                        <p
-                          className={`membership ${
-                            schedule.memberships.ocho && "active"
-                          }`}
-                        >
-                          S
-                        </p>
-                        <p
-                          className={`membership ${
-                            schedule.memberships.valle && "active"
-                          }`}
-                        >
-                          VALLE
-                        </p>
-                        <p
-                          className={`membership ${
-                            schedule.memberships.est && "active"
-                          }`}
-                        >
-                          EST
-                        </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.full && "active"
+                            }`}
+                          >
+                            FULL
+                          </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.doce && "active"
+                            }`}
+                          >
+                            M
+                          </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.ocho && "active"
+                            }`}
+                          >
+                            S
+                          </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.valle && "active"
+                            }`}
+                          >
+                            VALLE
+                          </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.est && "active"
+                            }`}
+                          >
+                            EST
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -173,156 +185,6 @@ const Schedules = () => {
           </div>
         ))}
       </div>
-
-      {/* <div className="schedule-table">
-        <div className="days">
-          {leftCol.map((days, i) => (
-            <div key={i}>
-              <div className="head">
-                <h5>{days.title}</h5>
-                <p>Planes disponibles por horario</p>
-              </div>
-              {days.schedules.map((schedule, i) => (
-                <div key={i}>
-                  <div
-                    className={`card ${
-                      schedule.span > 1 ? "span-" + schedule.span : ""
-                    }`}
-                  >
-                    <div className="card-head">
-                      <p className="hour">{schedule.hour}</p>
-                      <p className="discipline">{schedule.discipline}</p>
-                      <div
-                        className={`arrow ${
-                          schedule.membershipsShow ? "opened" : ""
-                        }`}
-                        onClick={() => openAvailablePlans(schedule.id)}
-                      >
-                        <img src="/icon-arrow-down.png" alt="ícono de flecha" />
-                      </div>
-                    </div>
-                    <div
-                      className={`card-memberships ${
-                        schedule.membershipsShow ? "show" : ""
-                      }`}
-                    >
-                      <p
-                        className={`membership ${
-                          schedule.memberships.full && "active"
-                        }`}
-                      >
-                        FULL
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.doce && "active"
-                        }`}
-                      >
-                        M
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.ocho && "active"
-                        }`}
-                      >
-                        S
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.valle && "active"
-                        }`}
-                      >
-                        VALLE
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.est && "active"
-                        }`}
-                      >
-                        EST
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-        <div className="days">
-          {rightCol.map((days, i) => (
-            <div key={i}>
-              <div className="head">
-                <h5>{days.title}</h5>
-                <p>Planes disponibles por horario</p>
-              </div>
-              {days.schedules.map((schedule, i) => (
-                <>
-                  <div
-                    className={`card ${
-                      schedule.span > 1 ? "span-" + schedule.span : ""
-                    }`}
-                    key={i}
-                  >
-                    <div className="card-head">
-                      <p className="hour">{schedule.hour}</p>
-                      <p className="discipline">{schedule.discipline}</p>
-                      <div
-                        className={`arrow ${
-                          schedule.membershipsShow ? "opened" : ""
-                        }`}
-                        onClick={() => openAvailablePlans(schedule.id)}
-                      >
-                        <img src="/icon-arrow-down.png" alt="ícono de flecha" />
-                      </div>
-                    </div>
-                    <div
-                      className={`card-memberships ${
-                        schedule.membershipsShow ? "show" : ""
-                      }`}
-                    >
-                      <p
-                        className={`membership ${
-                          schedule.memberships.full && "active"
-                        }`}
-                      >
-                        FULL
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.doce && "active"
-                        }`}
-                      >
-                        M
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.ocho && "active"
-                        }`}
-                      >
-                        S
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.valle && "active"
-                        }`}
-                      >
-                        VALLE
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.est && "active"
-                        }`}
-                      >
-                        EST
-                      </p>
-                    </div>
-                  </div>
-                </>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div> */}
     </section>
   );
 };

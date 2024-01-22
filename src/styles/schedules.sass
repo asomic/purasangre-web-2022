@@ -50,13 +50,13 @@
                 background-color: black
                 border-radius: 4px
                 margin-bottom: 6px
-                padding: 16px 23px
+                padding: 12px 23px
                 h5
                     text-transform: uppercase
                     font-weight: 800
                     letter-spacing: -0.02em
                     // font-size: 18px
-                    font-size: 17px
+                    font-size: 16px
                     color: $turquoiseBlue
                 p
                     display: none
@@ -112,6 +112,9 @@
                 &.span-11
                     display: none
 
+                &.noContent
+                    display: none
+
 @media (min-width: 768px)
     .schedules
         padding: 34px 6vw 44px
@@ -129,6 +132,7 @@
             .days
                 margin-bottom: 0
                 .head
+                    padding: 1.01em 26px 1.01em 23px
                     h5
                 .card
                     .card-head
@@ -141,6 +145,7 @@
                             &.active
                         &.show
                     &.noContent
+                        display: block
                         min-height: 26px
                         background-color: rgba(black,0.7)
                     &.span-2
@@ -188,10 +193,11 @@
                     display: flex
                     justify-content: space-between
                     align-items: center
+                    padding: 0.82em 26px 0.82em 23px
                     h5
                     p
                         display: inherit
-                        font-size: 16px
+                        font-size: 14px
                         text-transform: uppercase
                         color: $mexicanPink
                 .card
