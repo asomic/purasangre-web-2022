@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import dataSchedules from "../lib/dataSchedules";
+import { dataSchedules } from "../lib/dataSchedules";
 import "../styles/schedules.sass";
 
 const Schedules = () => {
@@ -9,23 +9,27 @@ const Schedules = () => {
     return date + random;
   };
 
+  console.log();
+  const scheduleCols = dataSchedules.cols;
+
   const [schedules, setSchedules] = useState(
-    dataSchedules.map((item) => {
-      return {
-        forDays: item.forDays,
-        priority: item.priority,
-        schedules: item.schedules.map((item) => {
-          return {
-            id: generateID(),
-            hour: item.hour,
-            discipline: item.discipline,
-            memberships: item.memberships,
-            span: item.span,
-            noContent: item.noContent ? item.noContent : false,
-          };
-        }),
-        membershipsShow: false,
-      };
+    scheduleCols.map((item) => {
+      const elem = item.map((e) => {
+        return {
+          title: e.title,
+          schedules: e.schedules.map((schedule) => {
+            return {
+              hour: schedule.hour,
+              discipline: schedule.discipline,
+              memberships: schedule.memberships,
+              span: schedule.span,
+              id: generateID(),
+              noContent: schedule.noContent ? schedule.noContent : false,
+            };
+          }),
+        };
+      });
+      return elem;
     })
   );
 
@@ -35,33 +39,35 @@ const Schedules = () => {
     if (firstClick) {
       setSchedules(
         schedules.map((item) => {
-          return {
-            forDays: item.forDays,
-            priority: item.priority,
-            schedules: item.schedules.map((item) => {
-              if (item.id === index) {
-                return { ...item, membershipsShow: true };
-              } else {
-                return { ...item, membershipsShow: false };
-              }
-            }),
-          };
+          return item.map((e) => {
+            return {
+              title: e.title,
+              schedules: e.schedules.map((schedule) => {
+                if (schedule.id === index) {
+                  return { ...schedule, membershipsShow: true };
+                } else {
+                  return { ...schedule, membershipsShow: false };
+                }
+              }),
+            };
+          });
         })
       );
       setOnFirstClick(false);
     } else {
       setSchedules(
         schedules.map((item) => {
-          return {
-            forDays: item.forDays,
-            priority: item.priority,
-            schedules: item.schedules.map((item) => {
-              return {
-                ...item,
-                membershipsShow: false,
-              };
-            }),
-          };
+          return item.map((e) => {
+            return {
+              title: e.title,
+              schedules: e.schedules.map((schedule) => {
+                return {
+                  ...schedule,
+                  membershipsShow: false,
+                };
+              }),
+            };
+          });
         })
       );
       setOnFirstClick(true);
@@ -90,88 +96,94 @@ const Schedules = () => {
           </p>
         </div>
       </div>
+
       <div className="schedule-table">
-        {schedules.map((days, index) => {
-          return (
-            <div className="days" key={index}>
-              <div className="head">
-                <h5>{days.forDays}</h5>
-                <p>Planes disponibles por horario</p>
-              </div>
-              {days.schedules.map((schedule) =>
-                schedule.noContent ? (
-                  <div
-                    className={`card noContent ${
-                      schedule.span > 1 ? "span-" + schedule.span : ""
-                    }`}
-                    key={schedule.id}
-                  ></div>
-                ) : (
-                  <div
-                    className={`card ${
-                      schedule.span > 1 ? "span-" + schedule.span : ""
-                    }`}
-                    key={schedule.id}
-                  >
-                    <div className="card-head">
-                      <p className="hour">{schedule.hour}</p>
-                      <p className="discipline">{schedule.discipline}</p>
+        {schedules.map((col, colIndex) => (
+          <div key={colIndex} className="days">
+            {col.map((day, dayIndex) => (
+              <div key={`${colIndex}-${dayIndex}`}>
+                <div className="head">
+                  <h5>{day.title}</h5>
+                  <p>Planes disponibles por horario</p>
+                </div>
+                {day.schedules.map((schedule, scheduleIndex) => (
+                  <div key={`${colIndex}-${dayIndex}-${scheduleIndex}`}>
+                    {schedule.noContent ? (
                       <div
-                        className={`arrow ${
-                          schedule.membershipsShow ? "opened" : ""
+                        className={`card noContent ${
+                          schedule.span > 1 ? "span-" + schedule.span : ""
                         }`}
-                        onClick={() => openAvailablePlans(schedule.id)}
+                      ></div>
+                    ) : (
+                      <div
+                        className={`card ${
+                          schedule.span > 1 ? "span-" + schedule.span : ""
+                        }`}
                       >
-                        <img src="/icon-arrow-down.png" alt="ícono de flecha" />
+                        <div className="card-head">
+                          <p className="hour">{schedule.hour}</p>
+                          <p className="discipline">{schedule.discipline}</p>
+                          <div
+                            className={`arrow ${
+                              schedule.membershipsShow ? "opened" : ""
+                            }`}
+                            onClick={() => openAvailablePlans(schedule.id)}
+                          >
+                            <img
+                              src="/icon-arrow-down.png"
+                              alt="ícono de flecha"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className={`card-memberships ${
+                            schedule.membershipsShow ? "show" : ""
+                          }`}
+                        >
+                          <p
+                            className={`membership ${
+                              schedule.memberships.full && "active"
+                            }`}
+                          >
+                            FULL
+                          </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.doce && "active"
+                            }`}
+                          >
+                            M
+                          </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.ocho && "active"
+                            }`}
+                          >
+                            S
+                          </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.valle && "active"
+                            }`}
+                          >
+                            VALLE
+                          </p>
+                          <p
+                            className={`membership ${
+                              schedule.memberships.est && "active"
+                            }`}
+                          >
+                            EST
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      className={`card-memberships ${
-                        schedule.membershipsShow ? "show" : ""
-                      }`}
-                    >
-                      <p
-                        className={`membership ${
-                          schedule.memberships.full && "active"
-                        }`}
-                      >
-                        FULL
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.doce && "active"
-                        }`}
-                      >
-                        M
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.ocho && "active"
-                        }`}
-                      >
-                        S
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.valle && "active"
-                        }`}
-                      >
-                        VALLE
-                      </p>
-                      <p
-                        className={`membership ${
-                          schedule.memberships.est && "active"
-                        }`}
-                      >
-                        EST
-                      </p>
-                    </div>
+                    )}
                   </div>
-                )
-              )}
-            </div>
-          );
-        })}
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   );
