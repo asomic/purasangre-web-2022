@@ -42,7 +42,7 @@ const PersonalizadoPage = ({ location }) => {
             </p>
           </div>
         </Infocarddata>
-        <Infocardimage image="/cristobal_clases_dos.webp" />
+        <Infocardimage image="/cristobal_clases_dos.webp"/>
         <Infocarddata>
           <div className="info-card-data-header">
             <p className="pretitle">Plan</p>

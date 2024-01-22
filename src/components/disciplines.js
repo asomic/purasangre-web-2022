@@ -29,7 +29,7 @@ const Disciplines = () => {
           <Link
             to="/personalizado"
             className="discipline-card"
-            style={{ backgroundImage: "url(/back-7.webp)" }}
+            style={{ backgroundImage: "url(/cristobal_clases_dos_bw.webp)" }}
           >
             <h2>Personalizado</h2>
             <p>Entrena CrossFit al ritmo que quieras</p>

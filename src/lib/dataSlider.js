@@ -9,7 +9,7 @@ const dataSlider = [
       title:
         "<span class=italic>La comunidad fitness</span><br /> <span class=color-turquoiseBlue>más grande de la vii región</span>",
       button: {
-        text: "Contrata ahora",
+        text: "Unete aquí",
         link: "planes",
       },
     },
