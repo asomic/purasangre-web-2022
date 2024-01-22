@@ -211,7 +211,6 @@ const dataSchedules = [
       },
     ],
   },
-
   {
     forDays: "Lunes, miércoles y jueves",
     priority: 2,
