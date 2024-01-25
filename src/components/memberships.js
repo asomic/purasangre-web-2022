@@ -42,33 +42,6 @@ const Memberships = ({ summarized, title, moreLink }) => {
           ] : [];
         };
 
-        // const getDoceClases = () => {
-        //   const filteredPlans = resultData.plans.filter((item) =>
-        //     item.plan.startsWith("12 clases")
-        //   );
-        //   const result = filteredPlans.map((item) => {
-        //     return {
-        //       id: item.id,
-        //       name: item.period,
-        //       price: item.amount,
-        //       buyable: true,
-        //     };
-        //   });
-
-//             return filteredPlans[0] ? [
-        //     {
-        //       info: {
-        //         name: "12 Clases",
-        //         hours: filteredPlans[0].schedule_hours,
-        //         days: filteredPlans[0].schedule_days,
-        //       },
-        //       periods: {
-        //         result,
-        //       },
-        //     },
-        //   ] : [];
-        // };
-
         const getDoceClases = () => {
           const filteredPlans = resultData.plans.filter((item) => {
             if (
@@ -100,37 +73,7 @@ const Memberships = ({ summarized, title, moreLink }) => {
           ] : [];
         };
 
-        const getAmClases = () => {
-          const filteredPlans = resultData.plans.filter((item) =>
-            item.plan.startsWith("AM")
-          );
-          const result = filteredPlans.map((item) => {
-            return {
-              id: item.id,
-              name: item.period,
-              price: item.amount,
-              buyable: true,
-            };
-          });
-
-            return filteredPlans[0] ? [
-            {
-              info: {
-                name: "AM",
-                hours: filteredPlans[0].schedule_hours,
-                days: filteredPlans[0].schedule_days,
-              },
-              periods: {
-                result,
-              },
-            },
-          ] : [];
-        };
-
         const getOchoClases = () => {
-          // const filteredPlans = resultData.plans.filter((item) =>
-          //   item.plan.startsWith("8 Sesiones")
-          // );
           const filteredPlans = resultData.plans.filter((item) => {
             if (
               item.plan.startsWith("8 Sesiones") ||
@@ -189,9 +132,9 @@ const Memberships = ({ summarized, title, moreLink }) => {
           ] : [];
         };
 
-        const getLunchClases = () => {
+        const getValle = () => {
           const filteredPlans = resultData.plans.filter((item) =>
-            item.plan.startsWith("Lunch")
+            item.plan.startsWith("PLAN VALLE")
           );
           const result = filteredPlans.map((item) => {
             return {
@@ -202,45 +145,20 @@ const Memberships = ({ summarized, title, moreLink }) => {
             };
           });
 
-            return filteredPlans[0] ? [
-            {
-              info: {
-                name: "Lunch",
-                hours: filteredPlans[0].schedule_hours,
-                days: filteredPlans[0].schedule_days,
-              },
-              periods: {
-                result,
-              },
-            },
-          ] : [];
-        };
-
-        const getSeisAm = () => {
-          const filteredPlans = resultData.plans.filter((item) =>
-            item.plan.startsWith("6 AM")
-          );
-          const result = filteredPlans.map((item) => {
-            return {
-              id: item.id,
-              name: item.period,
-              price: 80000,
-              buyable: false,
-            };
-          });
-
-            return filteredPlans[0] ? [
-            {
-              info: {
-                name: "6 AM",
-                hours: filteredPlans[0].schedule_hours,
-                days: filteredPlans[0].schedule_days,
-              },
-              periods: {
-                result,
-              },
-            },
-          ] : [];
+          return filteredPlans[0]
+            ? [
+                {
+                  info: {
+                    name: "Valle",
+                    hours: filteredPlans[0].schedule_hours,
+                    days: filteredPlans[0].schedule_days,
+                  },
+                  periods: {
+                    result,
+                  },
+                },
+              ]
+            : [];
         };
 
         const getPersonalizado = () => {
@@ -287,17 +205,13 @@ const Memberships = ({ summarized, title, moreLink }) => {
           ...getFullPlans(),
           ...getDoceClases(),
           ...getOchoClases(),
-          ...getAmClases(),
-          ...getLunchClases(),
           ...getEstudiantesClases(),
-          ...getSeisAm(),
+          ...getValle(),
           ...getPersonalizado(),
-          // ...prueba(),
         ];
         setMembershipsData(thePlans);
       });
   }, []);
-
 
   return (
     <section className={`memberships ${summarized ? "onIndex" : "notIndex"}`}>
